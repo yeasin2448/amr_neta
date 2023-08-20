@@ -9,10 +9,148 @@
     <title>Neta</title>
   </head>
   <body>
-    <header class="bg-blue-400 py-6">
-      <h1 class="text-white text-center text-4xl font-bold font-thin">
-        Hello Neta
-      </h1>
+    <!-- header area start -->
+    <header class="header_area bg-o py-4 sticky top-0 z-[999]">
+      <div class="md:container container-fluid mx-auto">
+        <div
+          x-data="{ openMenu: false }"
+          class="flex items-center justify-between gap-5"
+        >
+          <div class="brand_logo">
+            <a
+              href="#0"
+              class="flex items-center gap-1 text-2xl font-semibold font-poppins group"
+            >
+              <span
+                class="text-green-500 group-hover:text-opacity-50 transition-all md:w-5 lg:w-full overflow-hidden"
+                >Amar</span
+              >
+              <span
+                class="text-green-500 text-opacity-50 group-hover:text-opacity-100 transition-all md:w-[14px] lg:w-full overflow-hidden"
+                >Neta</span
+              >
+            </a>
+          </div>
+          <div
+            :class="openMenu ? 'show' : 'hidden'"
+            class="main_menu bg-o md:flex items-center md:static fixed top-0 left-0 max-md:w-screen max-md:h-screen z-[999]"
+          >
+            <ul
+              class="flex md:flex-row flex-col items-center md:gap-5 gap-10 md:h-auto h-screen max-md:justify-center text-black text-opacity-60 lg:text-lg md:text-base text-xl md:font-normal font-medium font-poppins"
+            >
+              <li>
+                <a
+                  href="#0"
+                  class="px-2 hover:text-green-400 transition-all"
+                  aria-current="true"
+                  >Amr Neta</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >Question</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >Answer</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >petitions</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >petitions</a
+                >
+              </li>
+              <li class="md:hidden">
+                <button
+                  type="button"
+                  class="bg-black rounded-3xl py-2 px-6 text-white md:text-lg font-medium font-poppins"
+                >
+                  Login
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="lets_btn hidden md:block">
+            <button
+              type="button"
+              class="bg-black rounded-3xl py-2 px-6 text-white md:text-lg font-medium font-poppins"
+            >
+              Login
+            </button>
+          </div>
+          <div class="mobile_menu md:hidden relative z-[999]">
+            <button
+              type="button"
+              class="bg-transparent flex flex-col gap-1"
+              @click="openMenu = !openMenu"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                class="h-5 w-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
+    <!-- header area ends  -->
+
+    <!-- banner area start -->
+    <section class="banner_area">
+      <div class="container mx-auto">
+        <div class="grid grid-flow-row grid-cols-12 gap-6">
+          <div class="col-span-8 row-span-2">
+            <div class="banner_thumb w-full h-full aspect-w-4 aspect-h-2">
+              <img
+                src="../src/img/banner/slide2.jpg"
+                class="absolute inset-0 rounded-lg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-span-4 row-span-1">
+            <div class="banner_thumb w-full h-full aspect-w-2 aspect-h-1">
+              <img
+                src="../src/img/banner/slide3.jpg"
+                class="w-full rounded-lg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-span-4 row-span-1">
+            <div class="banner_thumb w-full h-full aspect-w-2 aspect-h-1">
+              <img
+                src="../src/img/banner/slide3.jpg"
+                class="w-full rounded-lg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner area ends  -->
   </body>
 </html>
