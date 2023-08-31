@@ -40,6 +40,7 @@ module.exports = {
       backgroundImage: {
         bg_multi_offer: "url('../src/images/banner/multi_offer.png')",
         single_offer: "url('../src/images/banner/single_offer.png')",
+        countdown_img: "url('/src/img/banner/slide3.png')",
       },
       animation: {
         blob: "blob 7s infinite",
