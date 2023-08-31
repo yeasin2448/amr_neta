@@ -11,7 +11,7 @@
   <body>
     <!-- header area start -->
     <header class="header_area bg-white py-4 sticky top-0 z-[999]">
-      <div class="md:container container-fluid mx-auto">
+      <div class="container-fluid mx-auto">
         <div
           x-data="{ openMenu: false }"
           class="flex items-center justify-between gap-5"
@@ -120,8 +120,8 @@
 
     <!-- banner area start -->
     <section class="banner_area">
-      <div class="container mx-auto">
-        <div class="grid grid-flow-row grid-cols-12 gap-6">
+      <div class="container-fluid mx-auto">
+        <div class="grid grid-flow-row grid-cols-12 sm:gap-6 gap-3">
           <div class="col-span-8 row-span-2">
             <div class="banner_thumb w-full h-full aspect-w-4 aspect-h-2">
               <img
@@ -133,11 +133,17 @@
           </div>
           <div class="col-span-4 row-span-1">
             <div class="banner_thumb w-full h-full aspect-w-2 aspect-h-1">
-              <img
+              <!-- <img
                 src="../src/img/banner/slide3.jpg"
                 class="w-full rounded-lg"
                 alt=""
-              />
+              /> -->
+              <video class="w-full rounded-lg" controls="autoplay">
+                <source
+                  src="https://www.youtube.com/embed/uKDi7vnEYlM"
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </div>
           <div class="col-span-4 row-span-1">
@@ -153,6 +159,917 @@
       </div>
     </section>
     <!-- banner area ends  -->
+
+    <!-- question area start -->
+    <section class="question_area lg:py-10 py-8">
+      <div class="container-fluid mx-auto">
+        <div
+          class="section_header pb-8 flex flex-wrap items-center justify-between gap-5"
+        >
+          <h3
+            class="inline-block px-5 text-black xl:text-4xl lg:text-2xl md:text-xl text-lg font-medium relative before:block before:absolute before:top-1/2 before:left-0 before:w-[100px] before:h-[50px] before:bg-green-500 before:-z-10 before:-skew-x-[20deg] before:-translate-y-1/2"
+          >
+            Neta Got Most Questions
+          </h3>
+          <a
+            href="#0"
+            class="inline-block bg-green-600 p-2 w-[200px] text-center rounded-md text-white md:text-base text-sm font-normal"
+            >More Questions</a
+          >
+        </div>
+        <div
+          class="grid 2xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-6 gap-3"
+        >
+          <div
+            class="qa_item bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/01.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Nurunnabi Chowdhury - নুরুন্নবী চৌধুরী
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+          </div>
+          <div
+            class="qa_item bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/02.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Md. Faridul Haque Khan -মোঃ ফরিদুল হক খান
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+          </div>
+          <div
+            class="qa_item bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/03.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Md. Aftab Uddin Sarker -মোঃ আফতাব উদ্দিন সরকার
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+          </div>
+          <div
+            class="qa_item bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/04.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Anwarul Abedin Khan -আনোয়ারুল আবেদীন খান
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+          </div>
+          <div
+            class="qa_item bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/05.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Md. Abul Kalam -মোঃ আবুল কালাম
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >Former/Previous MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+          </div>
+          <div
+            class="qa_item bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/06.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Mir Mushtaque Ahmed Robi -মীর মোস্তাক আহমেদ রবি
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- question area ends  -->
+
+    <!-- question area start -->
+    <section class="answer_area lg:pb-10 pb-8">
+      <div class="container-fluid mx-auto">
+        <div
+          class="section_header pb-8 flex flex-wrap items-center justify-between gap-5"
+        >
+          <h3
+            class="inline-block px-5 text-black xl:text-4xl lg:text-2xl md:text-xl text-lg font-medium relative before:block before:absolute before:top-1/2 before:left-0 before:w-[100px] before:h-[50px] before:bg-green-500 before:-z-10 before:-skew-x-[20deg] before:-translate-y-1/2"
+          >
+            Neta Gave Most Answers
+          </h3>
+          <a
+            href="#0"
+            class="inline-block bg-green-600 p-2 w-[200px] text-center rounded-md text-white md:text-base text-sm font-normal"
+            >Leader Board</a
+          >
+        </div>
+        <div
+          class="grid 2xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-6 gap-3"
+        >
+          <div
+            class="ans_item relative bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/01.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Nurunnabi Chowdhury - নুরুন্নবী চৌধুরী
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+            <div class="card_border">
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] top-0 left-0 origin-left scale-x-0 group-hover:scale-x-100"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 right-0 origin-top scale-y-0 group-hover:scale-y-100 group-hover:delay-[.3s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] bottom-0 left-0 origin-right scale-x-0 group-hover:scale-x-100 group-hover:delay-[.6s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 left-0 origin-bottom scale-y-0 group-hover:scale-y-100 group-hover:delay-[.9s]"
+              ></span>
+            </div>
+          </div>
+          <div
+            class="ans_item relative bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/02.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Md. Faridul Haque Khan -মোঃ ফরিদুল হক খান
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+            <div class="card_border">
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] top-0 left-0 origin-left scale-x-0 group-hover:scale-x-100"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 right-0 origin-top scale-y-0 group-hover:scale-y-100 group-hover:delay-[.3s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] bottom-0 left-0 origin-right scale-x-0 group-hover:scale-x-100 group-hover:delay-[.6s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 left-0 origin-bottom scale-y-0 group-hover:scale-y-100 group-hover:delay-[.9s]"
+              ></span>
+            </div>
+          </div>
+          <div
+            class="ans_item relative bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/03.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Md. Aftab Uddin Sarker -মোঃ আফতাব উদ্দিন সরকার
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+            <div class="card_border">
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] top-0 left-0 origin-left scale-x-0 group-hover:scale-x-100"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 right-0 origin-top scale-y-0 group-hover:scale-y-100 group-hover:delay-[.3s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] bottom-0 left-0 origin-right scale-x-0 group-hover:scale-x-100 group-hover:delay-[.6s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 left-0 origin-bottom scale-y-0 group-hover:scale-y-100 group-hover:delay-[.9s]"
+              ></span>
+            </div>
+          </div>
+          <div
+            class="ans_item relative bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/04.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Anwarul Abedin Khan -আনোয়ারুল আবেদীন খান
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+            <div class="card_border">
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] top-0 left-0 origin-left scale-x-0 group-hover:scale-x-100"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 right-0 origin-top scale-y-0 group-hover:scale-y-100 group-hover:delay-[.3s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] bottom-0 left-0 origin-right scale-x-0 group-hover:scale-x-100 group-hover:delay-[.6s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 left-0 origin-bottom scale-y-0 group-hover:scale-y-100 group-hover:delay-[.9s]"
+              ></span>
+            </div>
+          </div>
+          <div
+            class="ans_item relative bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/05.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Md. Abul Kalam -মোঃ আবুল কালাম
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >Former/Previous MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+            <div class="card_border">
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] top-0 left-0 origin-left scale-x-0 group-hover:scale-x-100"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 right-0 origin-top scale-y-0 group-hover:scale-y-100 group-hover:delay-[.3s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] bottom-0 left-0 origin-right scale-x-0 group-hover:scale-x-100 group-hover:delay-[.6s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 left-0 origin-bottom scale-y-0 group-hover:scale-y-100 group-hover:delay-[.9s]"
+              ></span>
+            </div>
+          </div>
+          <div
+            class="ans_item relative bg-white shadow-theme_shadow px-3 py-8 rounded-md text-center group hover:scale-[1.05] transition-all"
+          >
+            <div class="item_thumb h-[100px]">
+              <img
+                class="h-full object-contain border-2 border-green-500 mx-auto rounded-full"
+                src="../src/img/question/06.png"
+                alt=""
+              />
+            </div>
+            <div class="item_text pt-5">
+              <a href="#0">
+                <h6
+                  class="text-green-500 md:text-base text-sm font-normal line-clamp-2"
+                >
+                  Mir Mushtaque Ahmed Robi -মীর মোস্তাক আহমেদ রবি
+                </h6>
+              </a>
+              <span
+                class="status inline-block text-[#838383] text-sm font-normal"
+                >MP</span
+              >
+              <a
+                href="#0"
+                class="text-green-500 text-opacity-70 text-sm font-normal block pt-2 group-hover:text-red-400 transition-all"
+                >71 Question</a
+              >
+            </div>
+            <div class="card_border">
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] top-0 left-0 origin-left scale-x-0 group-hover:scale-x-100"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 right-0 origin-top scale-y-0 group-hover:scale-y-100 group-hover:delay-[.3s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-full h-[1px] bottom-0 left-0 origin-right scale-x-0 group-hover:scale-x-100 group-hover:delay-[.6s]"
+              ></span>
+              <span
+                class="inline-block absolute bg-green-500 z-10 transition-all duration-[.3s] w-[1px] h-full top-0 left-0 origin-bottom scale-y-0 group-hover:scale-y-100 group-hover:delay-[.9s]"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- question area ends  -->
+
+    <!-- three section start -->
+    <section class="three_section lg:pb-10 pb-8">
+      <div class="container-fluid mx-auto">
+        <div class="grid grid-cols-3 md:gap-6 gap-3">
+          <div class="top_qa_update">
+            <div class="bg-white p-5 text-center shadow-theme_shadow">
+              <h3
+                class="text-green-500 xl:text-2xl md:text-xl text-lg font-medium pb-8"
+              >
+                Top
+                <span
+                  class="text-red-500 inline-block relative z-[1] p-2 after:absolute after:block after:left-0 after:top-0 after:bg-white after:border after:shadow-theme_shadow after:w-full after:h-full after:skew-x-[20deg] after:-z-10"
+                  >Question</span
+                >
+                Update
+              </h3>
+              <ul
+                class="flex flex-col gap-5 divide-y max-h-[600px] overflow-y-auto"
+              >
+                <li class="flex flex-col gap-3">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <i></i>
+                    <h4 class="text-[#484848] md:text-base text-sm font-normal">
+                      মোটরসাইকেলের নাম্বারপ্লেইট সাংবাদিক সাইনবোর্ড-কতোটুকু
+                      আইনসম্মত?
+                    </h4>
+                  </div>
+                </li>
+                <li class="flex flex-col gap-3 pt-5">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <i></i>
+                    <h4 class="text-[#484848] md:text-base text-sm font-normal">
+                      মোটরসাইকেলের নাম্বারপ্লেইট সাংবাদিক সাইনবোর্ড-কতোটুকু
+                      আইনসম্মত?
+                    </h4>
+                  </div>
+                </li>
+                <li class="flex flex-col gap-3 pt-5">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <i></i>
+                    <h4 class="text-[#484848] md:text-base text-sm font-normal">
+                      মোটরসাইকেলের নাম্বারপ্লেইট সাংবাদিক সাইনবোর্ড-কতোটুকু
+                      আইনসম্মত?
+                    </h4>
+                  </div>
+                </li>
+                <li class="flex flex-col gap-3 pt-5">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <i></i>
+                    <h4 class="text-[#484848] md:text-base text-sm font-normal">
+                      মোটরসাইকেলের নাম্বারপ্লেইট সাংবাদিক সাইনবোর্ড-কতোটুকু
+                      আইনসম্মত?
+                    </h4>
+                  </div>
+                </li>
+                <li class="flex flex-col gap-3 pt-5">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <i></i>
+                    <h4 class="text-[#484848] md:text-base text-sm font-normal">
+                      মোটরসাইকেলের নাম্বারপ্লেইট সাংবাদিক সাইনবোর্ড-কতোটুকু
+                      আইনসম্মত?
+                    </h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="top_qa_update">
+            <div class="bg-white p-5 text-center shadow-theme_shadow">
+              <h3
+                class="text-green-500 xl:text-2xl md:text-xl text-lg font-medium pb-8"
+              >
+                Recent
+                <span
+                  class="text-red-500 inline-block relative z-[1] p-2 after:absolute after:block after:left-0 after:top-0 after:bg-white after:border after:shadow-theme_shadow after:w-full after:h-full after:skew-x-[20deg] after:-z-10"
+                  >Answers</span
+                >
+                Updates
+              </h3>
+              <ul
+                class="flex flex-col gap-5 divide-y max-h-[600px] overflow-y-auto"
+              >
+                <li class="flex flex-col gap-3">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <p class="text-[#484848] md:text-base text-sm font-normal">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Obcaecati quibusdam in, magni esse hic accusamus.
+                    </p>
+                    <i></i>
+                  </div>
+                </li>
+                <li class="flex flex-col gap-3 pt-5">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <p class="text-[#484848] md:text-base text-sm font-normal">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Obcaecati quibusdam in, magni esse hic accusamus.
+                    </p>
+                    <i></i>
+                  </div>
+                </li>
+                <li class="flex flex-col gap-3 pt-5">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <p class="text-[#484848] md:text-base text-sm font-normal">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Obcaecati quibusdam in, magni esse hic accusamus.
+                    </p>
+                    <i></i>
+                  </div>
+                </li>
+                <li class="flex flex-col gap-3 pt-5">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <p class="text-[#484848] md:text-base text-sm font-normal">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Obcaecati quibusdam in, magni esse hic accusamus.
+                    </p>
+                    <i></i>
+                  </div>
+                </li>
+                <li class="flex flex-col gap-3 pt-5">
+                  <div class="ad_content flex items-center gap-2">
+                    <img
+                      class="w-[50px] h-[50px] rounded-full border-2 border-green-500"
+                      src=""
+                      alt=""
+                    />
+                    <div class="text-left">
+                      <p
+                        class="inline-block text-green-500 md:text-base text-sm font-normal"
+                      >
+                        AmarNeta Admin
+                      </p>
+                      <p
+                        class="text-[#484848] md:text-base text-sm font-normal"
+                      >
+                        May 31, 2023, 12:22am
+                      </p>
+                    </div>
+                  </div>
+                  <div class="adm_title flex items-start gap-2">
+                    <p class="text-[#484848] md:text-base text-sm font-normal">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Obcaecati quibusdam in, magni esse hic accusamus.
+                    </p>
+                    <i></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="top_qa_update">
+            <div class="bg-white p-5 text-center shadow-theme_shadow">
+              <h3
+                class="text-green-500 xl:text-2xl md:text-xl text-lg font-medium pb-8"
+              >
+                Latest
+                <span
+                  class="text-red-500 inline-block relative z-[1] p-2 after:absolute after:block after:left-0 after:top-0 after:bg-white after:border after:shadow-theme_shadow after:w-full after:h-full after:skew-x-[20deg] after:-z-10"
+                  >Videos</span
+                >
+                From Youtube
+              </h3>
+              <div class="grid grid-cols-2 gap-3 max-h-[600px] overflow-y-auto">
+                <div class="video_item">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/akzeX7E45ws"
+                    title="কী দেখে বুঝবেন হাসিনার পতন আসন্ন ? Pinaki Bhattacharya || The Untold"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video_item">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/daEFCFmWEbE"
+                    title="আমাদের কি কখনো শিক্ষা হবেনা? | MTFE 11,000 Crore Scam"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video_item">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/6ZehQFszNw8"
+                    title="MTFE কিভাবে এত বড় প্রতারণা করল ?"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video_item">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/6MXM7TyQPbU"
+                    title="শ্রীলংকার অর্থনীতি ঘুরে দাঁড়ালো কীভাবে ?"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video_item">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/FBr5lP_9H3E"
+                    title="ভূরাজনীতি: তেল বাণিজ্য নিয়ন্ত্রণে তুরুপের তাস হরমুজ প্রণালী | Geo Politics | Strait of Hormuz"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video_item">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/CmhUjKnZjg0"
+                    title="ভূরাজনীতি: বিশ্বব্যাপী প্রযুক্তি যুদ্ধের কেন্দ্র তাইওয়ান? | Geopolitics | Taiwan | Somoy TV"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video_item">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/FdSU19p8BmU"
+                    title="চীন-ভারত দ্বন্দ্বঃ কোন দেশ কাকে সমর্থন দেবে? | দৃশ্যপট | India China Clash | Somoy TV"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video_item">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/BRH0Nog7yt4"
+                    title="কাশ্মীর সংকটের ইতিহাস | বিশ্ব ইতিহাস | পর্ব-২ | History of Kashmir Crisis | India-Pakistan| Somoy TV"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- three section ends  -->
 
     <!-- optional js -->
     <script src="../dist/js/script.js"></script>

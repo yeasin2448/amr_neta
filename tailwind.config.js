@@ -33,7 +33,7 @@ module.exports = {
         bmp: "0px 1px 17px rgba(0, 27, 45, 0.09)",
       },
       boxShadow: {
-        bmpshadow: "0px 1px 13px rgba(46, 49, 146, 0.09)",
+        theme_shadow: "0px 1px 13px rgba(46, 49, 146, 0.09)",
         approve_process: "0px 0px 14px rgba(13, 193, 217, 0.16)",
         angle_shadow: "0px 1px 11px rgba(51, 73, 167, 0.09);",
       },
