@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style css -->
+    <link rel="stylesheet" href="../dist/css/output.css" />
+    <title>Neta</title>
+  </head>
+  <body>
+    <!-- header area start -->
+    <header class="header_area bg-white py-4 sticky top-0 z-[999]">
+      <div class="container-fluid mx-auto">
+        <div
+          x-data="{ openMenu: false }"
+          class="flex items-center justify-between gap-5"
+        >
+          <div class="brand_logo">
+            <a
+              href="#0"
+              class="flex items-center gap-1 text-2xl font-semibold font-poppins group"
+            >
+              <span
+                class="text-green-500 group-hover:text-opacity-50 transition-all md:w-5 lg:w-full overflow-hidden"
+                >Amar</span
+              >
+              <span
+                class="text-green-500 text-opacity-50 group-hover:text-opacity-100 transition-all md:w-[14px] lg:w-full overflow-hidden"
+                >Neta</span
+              >
+            </a>
+          </div>
+          <div
+            :class="openMenu ? 'show' : 'hidden'"
+            class="main_menu md:bg-transparent bg-o md:flex items-center md:static fixed top-0 left-0 max-md:w-screen max-md:h-screen z-[999]"
+          >
+            <ul
+              class="flex md:flex-row flex-col items-center md:gap-5 gap-10 md:h-auto h-screen max-md:justify-center md:text-black text-white text-opacity-60 lg:text-lg md:text-base text-xl md:font-normal font-medium font-poppins"
+            >
+              <li>
+                <a
+                  href="#0"
+                  class="px-2 hover:text-green-400 transition-all"
+                  aria-current="true"
+                  >Amr Neta</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >Question</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >Answer</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >petitions</a
+                >
+              </li>
+              <li>
+                <a href="#0" class="px-2 hover:text-green-400 transition-all"
+                  >petitions</a
+                >
+              </li>
+              <li class="md:hidden">
+                <button
+                  type="button"
+                  class="bg-black rounded-3xl py-2 px-6 text-white md:text-lg font-medium font-poppins"
+                >
+                  Login
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="lets_btn hidden md:block">
+            <button
+              type="button"
+              class="bg-black rounded-3xl py-2 px-6 text-white md:text-lg font-medium font-poppins"
+            >
+              Login
+            </button>
+          </div>
+          <div class="mobile_menu md:hidden relative z-[999]">
+            <button
+              type="button"
+              class="bg-transparent flex flex-col gap-1"
+              @click="openMenu = !openMenu"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                :class="openMenu ? 'text-white' : 'text-black'"
+                class="h-5 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header area ends  -->
+
+    <!-- banner area start -->
+    <section class="banner_area">
+      <div class="container-fluid mx-auto">
+        <div class="grid grid-flow-row grid-cols-12 sm:gap-6 gap-3">
+          <div class="col-span-12 row-span-2">
+            <div class="banner_thumb w-full h-full aspect-w-6 aspect-h-2">
+              <img
+                src="../src/img/banner/default.jpg"
+                class="absolute inset-0 rounded-lg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner area ends  -->
+
+    <!-- profile area start -->
+    <section class="profile_area lg:py-10 py-8">
+      <div class="md:container container-fluid mx-auto">
+        <div
+          class="profile_top bg-white shadow-theme_shadow rounded-md p-4 flex md:flex-row flex-col items-start gap-3"
+        >
+          <div class="profile_thumb w-[150px] h-[150px] rounded-md">
+            <img
+              class="w-full rounded-md"
+              src="../src/img/profile/user.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="profile_content md:w-[calc(100%_-_112px)] flex lg:flex-row flex-col gap-3"
+          >
+            <div class="profile_text lg:w-[calc(100%_-_212px)]">
+              <h3
+                class="text-black md:text-3xl sm:text-2xl text-xl font-semibold"
+              >
+                H.M. Ibrahim - এইচ এম ইব্রাহিম
+              </h3>
+              <p class="text-[#4a4a4a] text-sm font-normal pb-2">
+                Member of parliament
+              </p>
+              <div class="mp_location flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <i>
+                    <img
+                      src="https://img.icons8.com/ios/16/4a4a4a/marker--v1.png"
+                      alt="marker--v1"
+                    />
+                  </i>
+                  <span class="inline-block text-[#4a4a4a] text-sm font-normal"
+                    >Noakhali-1 , Noakhali</span
+                  >
+                </div>
+                <a href="#0" class="flex items-center gap-2">
+                  <i>
+                    <img
+                      src="https://img.icons8.com/material-outlined/16/22c55e/organization.png"
+                      alt="organization"
+                    />
+                  </i>
+                  <span class="inline-block text-green-500 text-sm font-normal"
+                    >Bangladesh Awami League
+                  </span>
+                </a>
+                <ul class="flex items-center gap-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="inline-block h-6 w-6 leading-6 rounded-full bg-green-500 text-center"
+                      target="_blank"
+                    >
+                      <img
+                        class="mx-auto my-1"
+                        src="https://img.icons8.com/ios-glyphs/16/ffffff/facebook-f.png"
+                        alt="facebook-f"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="inline-block h-6 w-6 leading-6 rounded-full bg-green-500 text-center"
+                      target="_blank"
+                    >
+                      <img
+                        class="mx-auto my-1"
+                        src="https://img.icons8.com/ios-glyphs/16/ffffff/instagram-new.png"
+                        alt="instagram-new"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="inline-block h-6 w-6 leading-6 rounded-full bg-green-500 text-center"
+                      target="_blank"
+                    >
+                      <img
+                        class="mx-auto my-1"
+                        src="https://img.icons8.com/ios-glyphs/16/ffffff/linkedin.png"
+                        alt="linkedin"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="inline-block h-6 w-6 leading-6 rounded-full bg-green-500 text-center"
+                      target="_blank"
+                    >
+                      <img
+                        class="mx-auto my-1"
+                        src="https://img.icons8.com/ios-glyphs/16/ffffff/twitter--v1.png"
+                        alt="twitter--v1"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="public_social">
+              <ul class="flex lg:flex-col flex-row flex-wrap gap-2">
+                <li>
+                  <a
+                    href="#0"
+                    class="bg-red-500 p-2 sm:w-[200px] xs:w-[160px] text-center rounded-md flex items-center gap-2"
+                  >
+                    <i>
+                      <img
+                        src="https://img.icons8.com/windows/20/ffffff/chat-message.png"
+                        alt="chat-message"
+                      />
+                    </i>
+                    <span class="text-white text-base font-medium"
+                      >Ask Question</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="bg-red-500 p-2 sm:w-[200px] xs:w-[160px] text-center rounded-md flex items-center gap-2"
+                  >
+                    <i>
+                      <img
+                        src="https://img.icons8.com/material-outlined/20/ffffff/new-post.png"
+                        alt="new-post"
+                      />
+                    </i>
+                    <span class="text-white text-base font-medium"
+                      >Email to MP</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="bg-red-500 p-2 sm:w-[200px] xs:w-[160px] text-center rounded-md flex items-center gap-2"
+                  >
+                    <i>
+                      <img
+                        src="https://img.icons8.com/ios/20/ffffff/twitter--v1.png"
+                        alt="twitter--v1"
+                      />
+                    </i>
+                    <span class="text-white text-base font-medium"
+                      >Tweet to MP</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="bg-red-500 p-2 sm:w-[200px] xs:w-[160px] text-center rounded-md flex items-center gap-2"
+                  >
+                    <i>
+                      <img
+                        src="https://img.icons8.com/metro/20/ffffff/phone.png"
+                        alt="phone"
+                      />
+                    </i>
+                    <span class="text-white text-base font-medium"
+                      >+8801711524024</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- profile area ends  -->
+
+    <!-- profile_details start -->
+    <section class="profile_details lg:pb-10 pb-8">
+      <div class="md:container container-fluid mx-auto">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="lg:col-span-3 lg:block hidden">
+            <div class="bg-green-500 p-4 rounded-md">
+              <ul
+                class="flex flex-col gap-5 text-white lg:text-lg text-base font-medium"
+              >
+                <li>
+                  <a
+                    href="#0"
+                    class="hover:text-black hover:ml-1 transition-all"
+                    >Biography</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="hover:text-black hover:ml-1 transition-all"
+                    >Election History</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="hover:text-black hover:ml-1 transition-all"
+                    >News</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="hover:text-black hover:ml-1 transition-all"
+                    >Wealth</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="hover:text-black hover:ml-1 transition-all"
+                    >Wealth 2014</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="hover:text-black hover:ml-1 transition-all"
+                    >Manifesto</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="bg-gray-200 rounded-md p-4 text-center mt-6">
+              <h4 class="text-black text-xl font-medium pb-4">Ambassador</h4>
+              <img
+                class="h-[150px] w-[150px] rounded-full bg-contain mx-auto"
+                src="../src/img/profile/ambassador.png"
+                alt=""
+              />
+              <p class="text-black mt-2 text-base font-normal">
+                Rabiul H Bhuyian
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-9 col-span-12">
+            <div
+              class="bg-white shadow-theme_shadow rounded-md p-4 flex flex-col gap-5"
+            >
+              <div class="basic_info">
+                <h4
+                  class="text-green-500 text-lg font-medium relative pl-7 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                >
+                  Personal Details
+                </h4>
+                <div class="info_text pt-2 flex flex-col gap-3">
+                  <p class="text-[#4a4a4a] text-sm font-normal">Term - 2nd</p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Date of Birth - 06.09.1958
+                  </p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">Sex - Male</p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Education - H.S.C
+                  </p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Profession - Business
+                  </p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Present Address - Flat No:C3, House No: 24/A - 24/B, Road
+                    No: 119,Gulshan-2, Dhaka-1212.
+                  </p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Permanent Address - D.C Hashan Shabe's House,Vill:
+                    Datterbag, P.O: Khilpara, Upozilla: Chatkhil, Dist:
+                    Noakhali.
+                  </p>
+                </div>
+              </div>
+              <div class="electoral-history">
+                <h4
+                  class="text-green-500 text-lg font-medium relative pl-7 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                >
+                  Personal Details
+                </h4>
+                <ul class="flex lg:gap-20 md:gap-10 gap-6 mt-3">
+                  <li class="flex flex-col gap-2">
+                    <h5 class="text-black text-base uppercase font-medium">
+                      Date
+                    </h5>
+                    <span class="text-[#4a4a4a] text-sm font-normal"
+                      >2014- Continue</span
+                    >
+                  </li>
+                  <li class="flex flex-col gap-2">
+                    <h5 class="text-black text-base uppercase font-medium">
+                      Constituency
+                    </h5>
+                    <span class="text-[#4a4a4a] text-sm font-normal"
+                      >Noakhali-1</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="queaston_asked">
+                <h4
+                  class="text-green-500 text-lg font-medium relative pl-7 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                >
+                  Latest <span class="text-red-500">Questions</span> Asked
+                </h4>
+                <div class="grid sm:grid-cols-2 lg:gap-5 gap-4 pt-3">
+                  <div class="bg-white shadow-theme_shadow p-4 rounded-md">
+                    <div class="flex items-center gap-3">
+                      <div class="item_thumb">
+                        <img
+                          class="w-16 h-16 rounded-full border-2 border-green-500"
+                          src="../src/img/question/01.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="item_text">
+                        <p class="text-green-500 text-sm font-normal">
+                          Rashidul Hasan
+                        </p>
+                        <span class="text-[#4a4a4a] text-sm font-normal"
+                          >Apr 25, 2017 04:31pm</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#0">
+                      <h6
+                        class="text-green-500 lg:text-2xl md:text-xl text-lg font-semibold pt-2"
+                      >
+                        প্রসঙ্গ: আউটসোর্সিং ট্রেনিং সেন্টার ও ডিজিটাল ল্যাব
+                        স্থাপন
+                      </h6>
+                    </a>
+                  </div>
+                  <div class="bg-white shadow-theme_shadow p-4 rounded-md">
+                    <div class="flex items-center gap-3">
+                      <div class="item_thumb">
+                        <img
+                          class="w-16 h-16 rounded-full border-2 border-green-500"
+                          src="../src/img/question/02.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="item_text">
+                        <p class="text-green-500 text-sm font-normal">
+                          Rashidul Hasan
+                        </p>
+                        <span class="text-[#4a4a4a] text-sm font-normal"
+                          >Apr 25, 2017 04:31pm</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#0">
+                      <h6
+                        class="text-green-500 lg:text-2xl md:text-xl text-lg font-semibold pt-2"
+                      >
+                        প্রসঙ্গ: আউটসোর্সিং ট্রেনিং সেন্টার ও ডিজিটাল ল্যাব
+                        স্থাপন
+                      </h6>
+                    </a>
+                  </div>
+                  <div class="bg-white shadow-theme_shadow p-4 rounded-md">
+                    <div class="flex items-center gap-3">
+                      <div class="item_thumb">
+                        <img
+                          class="w-16 h-16 rounded-full border-2 border-green-500"
+                          src="../src/img/question/03.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="item_text">
+                        <p class="text-green-500 text-sm font-normal">
+                          Rashidul Hasan
+                        </p>
+                        <span class="text-[#4a4a4a] text-sm font-normal"
+                          >Apr 25, 2017 04:31pm</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#0">
+                      <h6
+                        class="text-green-500 lg:text-2xl md:text-xl text-lg font-semibold pt-2"
+                      >
+                        প্রসঙ্গ: আউটসোর্সিং ট্রেনিং সেন্টার ও ডিজিটাল ল্যাব
+                        স্থাপন
+                      </h6>
+                    </a>
+                  </div>
+                  <div class="bg-white shadow-theme_shadow p-4 rounded-md">
+                    <div class="flex items-center gap-3">
+                      <div class="item_thumb">
+                        <img
+                          class="w-16 h-16 rounded-full border-2 border-green-500"
+                          src="../src/img/question/04.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="item_text">
+                        <p class="text-green-500 text-sm font-normal">
+                          Rashidul Hasan
+                        </p>
+                        <span class="text-[#4a4a4a] text-sm font-normal"
+                          >Apr 25, 2017 04:31pm</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#0">
+                      <h6
+                        class="text-green-500 lg:text-2xl md:text-xl text-lg font-semibold pt-2"
+                      >
+                        প্রসঙ্গ: আউটসোর্সিং ট্রেনিং সেন্টার ও ডিজিটাল ল্যাব
+                        স্থাপন
+                      </h6>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- profile_details ends  -->
+
+    <!-- footer area start -->
+    <footer>
+      <div class="footer_bottom bg-green-500 py-6">
+        <div class="md:container container-fluid mx-auto">
+          <p
+            class="text-white text-opacity-70 lg:text-lg text-base font-normal text-center"
+          >
+            2016-2023 AmarMP Team, All Rights Reserved. Developed by JRK
+            International
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer area ends  -->
+
+    <!-- optional js -->
+    <script src="../dist/js/script.js"></script>
+  </body>
+</html>
