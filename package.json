@@ -81,7 +81,7 @@
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2"
   },
-  "scripts": {
+  "scripts": { 
     "build": "npx tailwindcss -i ./src/css/style.css -o ./dist/css/output.css --watch",
     "build-js": "npx esbuild ./src/js/function.js --outfile=./dist/js/script.js --bundle --watch"
   },
