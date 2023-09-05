@@ -55,16 +55,31 @@
                 NeTa
               </span>
             </h4>
-            <p class="font-normal text-gray-700 text-center">
-              Don’t have an account?
-              <a href="signup.html" class="text-green-500">Register Now!</a>
-            </p>
           </div>
           <form>
             <div class="mb-4 relative w-full bg-white group rounded-md">
               <input
+                id="full-name"
+                type="text"
+                name="full-name"
+                class="block p-4 rounded-md w-full text-xs font-normal text-gray-900 placeholder:text-gray-700 bg-transparent outline outline-1 outline-gray-300 appearance-none focus:outline-green-500 peer"
+                placeholder=" "
+                onfocus="this.placeholder='Full Name'"
+                onblur="this.placeholder=' '"
+                required=""
+              />
+              <label
+                for="full-name"
+                class="ml-[14px] z-[1] flex items-center px-1 rounded-[3px] peer-focus:font-medium absolute bg-white text-xs font-normal text-gray-700 duration-300 transform -translate-y-[20px] scale-75 top-3 peer-focus:z-10 origin-[0] peer peer-disabled:bg-green-500 peer-focus:left-0 peer-focus:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[4.5px] peer-focus:scale-75 peer-focus:-translate-y-[20px]"
+              >
+                Full Name <span class="text-red-500">&nbsp; *</span>
+              </label>
+            </div>
+            <div class="mb-4 relative w-full bg-white group rounded-md">
+              <input
                 id="email"
                 type="email"
+                name="email"
                 class="block p-4 rounded-md w-full text-xs font-normal text-gray-900 placeholder:text-gray-700 bg-transparent outline outline-1 outline-gray-300 appearance-none focus:outline-green-500 peer"
                 placeholder=" "
                 onfocus="this.placeholder='Email'"
@@ -76,6 +91,24 @@
                 class="ml-[14px] z-[1] flex items-center px-1 rounded-[3px] peer-focus:font-medium absolute bg-white text-xs font-normal text-gray-700 duration-300 transform -translate-y-[20px] scale-75 top-3 peer-focus:z-10 origin-[0] peer peer-disabled:bg-green-500 peer-focus:left-0 peer-focus:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[4.5px] peer-focus:scale-75 peer-focus:-translate-y-[20px]"
               >
                 Email <span class="text-red-500">&nbsp; *</span>
+              </label>
+            </div>
+            <div class="mb-4 relative w-full bg-white group rounded-md">
+              <input
+                id="user-name"
+                type="text"
+                name="user-name"
+                class="block p-4 rounded-md w-full text-xs font-normal text-gray-900 placeholder:text-gray-700 bg-transparent outline outline-1 outline-gray-300 appearance-none focus:outline-green-500 peer"
+                placeholder=" "
+                onfocus="this.placeholder='Enter your user name'"
+                onblur="this.placeholder=' '"
+                required=""
+              />
+              <label
+                for="user-name"
+                class="ml-[14px] z-[1] flex items-center px-1 rounded-[3px] peer-focus:font-medium absolute bg-white text-xs font-normal text-gray-700 duration-300 transform -translate-y-[20px] scale-75 top-3 peer-focus:z-10 origin-[0] peer peer-disabled:bg-green-500 peer-focus:left-0 peer-focus:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[4.5px] peer-focus:scale-75 peer-focus:-translate-y-[20px]"
+              >
+                User Name <span class="text-red-500">&nbsp; *</span>
               </label>
             </div>
             <div class="mb-4 relative w-full bg-white group rounded-md">
@@ -95,6 +128,24 @@
                 Password <span class="text-red-500">&nbsp; *</span>
               </label>
             </div>
+            <div class="mb-4 relative w-full bg-white group rounded-md">
+              <input
+                id="confirm-password"
+                type="password"
+                name="confirm-password"
+                class="block p-4 rounded-md w-full text-xs font-normal text-gray-900 placeholder:text-gray-700 bg-transparent outline outline-1 outline-gray-300 appearance-none focus:outline-green-500 peer"
+                placeholder=" "
+                onfocus="this.placeholder='Re type password'"
+                onblur="this.placeholder=' '"
+                required=""
+              />
+              <label
+                for="confirm-password"
+                class="ml-[14px] z-[1] flex items-center px-1 rounded-[3px] peer-focus:font-medium absolute bg-white text-xs font-normal text-gray-700 duration-300 transform -translate-y-[20px] scale-75 top-3 peer-focus:z-10 origin-[0] peer peer-disabled:bg-green-500 peer-focus:left-0 peer-focus:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-[4.5px] peer-focus:scale-75 peer-focus:-translate-y-[20px]"
+              >
+                Confirm Password <span class="text-red-500">&nbsp; *</span>
+              </label>
+            </div>
             <div class="flex items-center justify-between">
               <div class="flex items-center">
                 <input
@@ -107,7 +158,7 @@
                   Remember me?
                 </label>
               </div>
-              <a href="#" class="font-normal text-red-500">
+              <a href="#" class="font-normal text-danger-500">
                 Forget password?
               </a>
             </div>
@@ -115,46 +166,15 @@
               type="submit"
               class="w-full px-8 py-4 mt-9 rounded-md font-medium text-base flex items-center justify-center bg-green-500 text-white hover:bg-green-600 transition-colors duration-200 mr-4"
             >
-              Sign In
+              Register
             </button>
             <div class="py-6 text-center">
               <p class="font-normal text-gray-700">OR</p>
             </div>
-            <div>
-              <button
-                type="button"
-                class="w-full px-8 py-[14px] rounded-md font-medium text-base flex items-center justify-center hover:bg-green-25 bg-white border border-gray-300 text-gray-900 hover:text-green-500 transition-colors duration-200"
-              >
-                <img
-                  alt="metamask"
-                  class="mr-3 w-7 h-7"
-                  src="../src/img/login/metamask.png"
-                />
-                Sign in with Meta Mask
-              </button>
-              <button
-                type="button"
-                class="w-full px-8 py-[14px] rounded-md font-medium text-base flex items-center justify-center hover:bg-green-25 bg-white border border-gray-300 text-gray-900 hover:text-green-500 transition-colors duration-200 my-3"
-              >
-                <img
-                  alt="facebook"
-                  class="mr-3 w-7 h-7"
-                  src="../src/img/login/facebook.png"
-                />
-                Sign in with Facebook
-              </button>
-              <button
-                type="button"
-                class="w-full px-8 py-[14px] rounded-md font-medium text-base flex items-center justify-center hover:bg-green-25 bg-white border border-gray-300 text-gray-900 hover:text-green-500 transition-colors duration-200"
-              >
-                <img
-                  alt="Google"
-                  class="mr-3 w-7 h-7"
-                  src="../src/img/login/Google.png"
-                />
-                Sign in with Google
-              </button>
-            </div>
+            <p class="font-normal text-gray-700 text-center">
+              I have an account?
+              <a href="login.html" class="text-green-500">Login Now!</a>
+            </p>
           </form>
         </div>
       </div>
