@@ -327,36 +327,56 @@
     <!-- profile_details start -->
     <section class="profile_details lg:pb-10 pb-8">
       <div class="md:container container-fluid mx-auto">
-        <div class="grid grid-cols-12 gap-6">
+        <div
+          x-data="{
+            openTab : 0,
+            activeClasses : 'text-black',
+            inactiveClasses : 'text-white'
+          }"
+          class="grid grid-cols-12 gap-6"
+        >
           <div class="lg:col-span-3 lg:block hidden">
             <div class="bg-green-500 p-4 rounded-md">
               <ul
                 class="flex flex-col gap-5 text-white lg:text-lg text-base font-medium"
               >
-                <li>
+                <li @click="openTab = 1">
                   <a
                     href="#0"
+                    :class="openTab === 1 ? activeClasses : inactiveClasses"
                     class="hover:text-black hover:ml-1 transition-all"
                     >Biography</a
                   >
                 </li>
-                <li>
+                <li @click="openTab = 2">
                   <a
                     href="#0"
+                    :class="openTab === 2 ? activeClasses : inactiveClasses"
                     class="hover:text-black hover:ml-1 transition-all"
                     >Election History</a
                   >
                 </li>
-                <li>
+                <li @click="openTab = 3">
                   <a
                     href="#0"
+                    :class="openTab === 3 ? activeClasses : inactiveClasses"
+                    class="hover:text-black hover:ml-1 transition-all"
+                  >
+                    Question
+                  </a>
+                </li>
+                <li @click="openTab = 4">
+                  <a
+                    href="#0"
+                    :class="openTab === 4 ? activeClasses : inactiveClasses"
                     class="hover:text-black hover:ml-1 transition-all"
                     >News</a
                   >
                 </li>
-                <li>
+                <li @click="openTab = 5">
                   <a
                     href="#0"
+                    :class="openTab === 5 ? activeClasses : inactiveClasses"
                     class="hover:text-black hover:ml-1 transition-all"
                     >Wealth</a
                   >
@@ -391,6 +411,7 @@
           </div>
           <div class="lg:col-span-9 col-span-12">
             <div
+              x-show="openTab === 0"
               class="bg-white shadow-theme_shadow rounded-md p-4 flex flex-col gap-5"
             >
               <div class="basic_info">
@@ -565,6 +586,642 @@
                 </div>
               </div>
             </div>
+            <div
+              x-show="openTab === 1"
+              class="bg-white shadow-theme_shadow rounded-md p-4 flex flex-col gap-5"
+            >
+              <div class="basic_info">
+                <h4
+                  class="text-green-500 text-lg font-medium relative pl-7 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                >
+                  Personal Details
+                </h4>
+                <div class="info_text pt-2 flex flex-col gap-3">
+                  <p class="text-[#4a4a4a] text-sm font-normal">Term - 2nd</p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Date of Birth - 06.09.1958
+                  </p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">Sex - Male</p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Education - H.S.C
+                  </p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Profession - Business
+                  </p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Present Address - Flat No:C3, House No: 24/A - 24/B, Road
+                    No: 119,Gulshan-2, Dhaka-1212.
+                  </p>
+                  <p class="text-[#4a4a4a] text-sm font-normal">
+                    Permanent Address - D.C Hashan Shabe's House,Vill:
+                    Datterbag, P.O: Khilpara, Upozilla: Chatkhil, Dist:
+                    Noakhali.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              x-show="openTab === 2"
+              class="bg-white shadow-theme_shadow rounded-md p-4 flex flex-col gap-5"
+            >
+              <div class="electoral-history">
+                <h4
+                  class="text-green-500 text-lg font-medium relative pl-7 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                >
+                  Election History
+                </h4>
+                <ul
+                  class="flex sm:flex-row flex-col lg:gap-20 md:gap-10 gap-6 mt-3"
+                >
+                  <li class="flex flex-col gap-2">
+                    <h5 class="text-black text-base uppercase font-medium">
+                      Date
+                    </h5>
+                    <span class="text-[#4a4a4a] text-sm font-normal"
+                      >2014- Continue</span
+                    >
+                  </li>
+                  <li class="flex flex-col gap-2">
+                    <h5 class="text-black text-base uppercase font-medium">
+                      Constituency
+                    </h5>
+                    <span class="text-[#4a4a4a] text-sm font-normal"
+                      >Noakhali-1</span
+                    >
+                  </li>
+                  <li class="flex flex-col gap-2">
+                    <h5 class="text-black text-base uppercase font-medium">
+                      Party
+                    </h5>
+                    <span class="text-[#4a4a4a] text-sm font-normal"
+                      >Bangladesh Awami League</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              x-show="openTab === 3"
+              class="bg-white shadow-theme_shadow rounded-md p-4 flex flex-col gap-5"
+            >
+              <div class="question_list">
+                <h4
+                  class="text-green-500 text-lg font-medium relative pl-7 pb-5 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                >
+                  All Questions
+                </h4>
+
+                <div class="relative overflow-x-auto">
+                  <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-sm text-[#838383] bg-gray-50">
+                      <tr>
+                        <th scope="col" class="px-6 py-3">Question</th>
+                        <th scope="col" class="px-6 py-3">Asked by</th>
+                        <th scope="col" class="px-6 py-3">Status</th>
+                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                          Replay Count
+                        </th>
+                        <th scope="col" class="px-6 py-3">Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0"> রাস্তা পাকাকরন প্রসঙ্গে </a>
+                        </th>
+                        <td class="px-6 py-4">Shudeb Nath</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2019 05:46pm</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0">
+                            শিক্ষা-প্রতিষ্ঠানের সামনে সড়ক নির্মাণের আবেদন
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Arafat Hossain</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Apr 16, 2019 04:22am</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0" class="flex md:flex-row flex-col gap-2">
+                            <i>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
+                                />
+                              </svg>
+                            </i>
+                            <span>
+                              চাটখিল উপজেলার পাচগাঁও ইউনিয়নের গোলাম কিবরিয়া
+                              সড়কটির বেহাল দশা। কাচারী বাজার থেকে পাল্লা যাওয়ার
+                              একটি মাত্র সড়ক। এটি যেন মরনফাদ।
+                            </span>
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Jamil Monsur</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2019 05:46pm</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0">
+                            Donation to West Dealiai Nurani Madrasha
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Md. Nizam Uddin</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">2 Reply</td>
+                        <td class="px-6 py-4">Jun 2, 2017 09:40am</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0"> বিদ্যুৎয়ানের জন্য আবেদন। </a>
+                        </th>
+                        <td class="px-6 py-4">Monir Hasan</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">1 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2017 09:40pm</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0">
+                            LGED এর অন্তর্ভুক্ত রাস্তা কাঁচা রাস্তা পাকাকরণ
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Anisur Rahman</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Apr 13, 2019 05:09pm</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0">
+                            প্রসঙ্গ: আউটসোর্সিং ট্রেনিং সেন্টার ও ডিজিটাল ল্যাব
+                            স্থাপন
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Rashidul Hasan</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">1 Reply</td>
+                        <td class="px-6 py-4">Apr 25, 2017 04:31pm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div
+              x-show="openTab === 4"
+              class="bg-white shadow-theme_shadow rounded-md p-4 flex flex-col gap-5"
+            >
+              <div class="electoral-history">
+                <h4
+                  class="text-green-500 text-lg font-medium relative pl-7 pb-5 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                >
+                  News Update
+                </h4>
+                <div class="grid xl:grid-cols-3 sm:grid-cols-2 gap-4">
+                  <div
+                    class="bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+                  >
+                    <img
+                      class="lg:h-48 md:h-36 w-full object-cover object-center"
+                      src="../src/img/news/01.jpg"
+                      alt="blog"
+                    />
+                    <div class="p-6">
+                      <div class="flex items-center gap-3">
+                        <a
+                          href="#0"
+                          class="text-green-500 md:text-base text-sm font-normal"
+                          >AmrNeta Admin</a
+                        >
+                        <span
+                          class="post_date text-[#a4a4a4] text-sm font-normal"
+                          >Jan 4, 2020 08:04am</span
+                        >
+                      </div>
+                      <h1
+                        class="title-font text-lg font-medium text-gray-900 mb-3"
+                      >
+                        ১৪ জানুয়ারি ঢাকার লেইক ভিউ হোটেলে
+                      </h1>
+                      <p class="text-base mb-3">
+                        ১৪ জানুয়ারি ঢাকার লেইক ভিউ হোটেলে আমারএমপি’র ওয়ার্কশপ
+                        অনুষ্ঠিত হবে
+                      </p>
+                      <div class="flex items-center flex-wrap">
+                        <a
+                          href="#0"
+                          class="text-green-500 inline-flex items-center md:mb-2 lg:mb-0"
+                          >Learn More
+                          <svg
+                            class="w-4 h-4 ml-2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                          </svg>
+                        </a>
+                        <span
+                          class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"
+                        >
+                          <svg
+                            class="w-4 h-4 mr-1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                            ></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                          </svg>
+                          1.2K
+                        </span>
+                        <span
+                          class="text-gray-400 inline-flex items-center leading-none text-sm"
+                        >
+                          <svg
+                            class="w-4 h-4 mr-1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                            ></path>
+                          </svg>
+                          6
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+                  >
+                    <img
+                      class="lg:h-48 md:h-36 w-full object-cover object-center"
+                      src="../src/img/news/02.jpg"
+                      alt="blog"
+                    />
+                    <div class="p-6">
+                      <div class="flex items-center gap-3">
+                        <a
+                          href="#0"
+                          class="text-green-500 md:text-base text-sm font-normal"
+                          >AmrNeta Admin</a
+                        >
+                        <span
+                          class="post_date text-[#a4a4a4] text-sm font-normal"
+                          >Jan 4, 2020 08:04am</span
+                        >
+                      </div>
+                      <h1
+                        class="title-font text-lg font-medium text-gray-900 mb-3"
+                      >
+                        ১৪ জানুয়ারি ঢাকার লেইক ভিউ হোটেলে
+                      </h1>
+                      <p class="text-base mb-3">
+                        ৩৫০ স্বেচ্ছাসেবী নিয়োগ দিবে আমার এমপি ডট কম
+                      </p>
+                      <div class="flex items-center flex-wrap">
+                        <a
+                          href="#0"
+                          class="text-green-500 inline-flex items-center md:mb-2 lg:mb-0"
+                          >Learn More
+                          <svg
+                            class="w-4 h-4 ml-2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                          </svg>
+                        </a>
+                        <span
+                          class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"
+                        >
+                          <svg
+                            class="w-4 h-4 mr-1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                            ></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                          </svg>
+                          1.2K
+                        </span>
+                        <span
+                          class="text-gray-400 inline-flex items-center leading-none text-sm"
+                        >
+                          <svg
+                            class="w-4 h-4 mr-1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                            ></path>
+                          </svg>
+                          6
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+                  >
+                    <img
+                      class="lg:h-48 md:h-36 w-full object-cover object-center"
+                      src="../src/img/news/03.jpg"
+                      alt="blog"
+                    />
+                    <div class="p-6">
+                      <div class="flex items-center gap-3">
+                        <a
+                          href="#0"
+                          class="text-green-500 md:text-base text-sm font-normal"
+                          >AmrNeta Admin</a
+                        >
+                        <span
+                          class="post_date text-[#a4a4a4] text-sm font-normal"
+                          >Jan 4, 2020 08:04am</span
+                        >
+                      </div>
+                      <h1
+                        class="title-font text-lg font-medium text-gray-900 mb-3"
+                      >
+                        ১৪ জানুয়ারি ঢাকার লেইক ভিউ হোটেলে
+                      </h1>
+                      <p class="text-base mb-3">
+                        ১৪ জানুয়ারি ঢাকার লেইক ভিউ হোটেলে আমারএমপি’র ওয়ার্কশপ
+                        অনুষ্ঠিত হবে
+                      </p>
+                      <div class="flex items-center flex-wrap">
+                        <a
+                          href="#0"
+                          class="text-green-500 inline-flex items-center md:mb-2 lg:mb-0"
+                          >Learn More
+                          <svg
+                            class="w-4 h-4 ml-2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                          </svg>
+                        </a>
+                        <span
+                          class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"
+                        >
+                          <svg
+                            class="w-4 h-4 mr-1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                            ></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                          </svg>
+                          1.2K
+                        </span>
+                        <span
+                          class="text-gray-400 inline-flex items-center leading-none text-sm"
+                        >
+                          <svg
+                            class="w-4 h-4 mr-1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                            ></path>
+                          </svg>
+                          6
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              x-show="openTab === 5"
+              class="bg-white shadow-theme_shadow rounded-md p-4 flex flex-col gap-5"
+            >
+              <div class="question_list">
+                <h4
+                  class="text-green-500 text-lg font-medium relative pl-7 pb-5 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                >
+                  Wealth 2014 -- Continue
+                </h4>
+
+                <div class="relative overflow-x-auto">
+                  <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-sm text-[#838383] bg-gray-50">
+                      <tr>
+                        <th scope="col" class="px-6 py-3">Question</th>
+                        <th scope="col" class="px-6 py-3">Asked by</th>
+                        <th scope="col" class="px-6 py-3">Status</th>
+                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                          Replay Count
+                        </th>
+                        <th scope="col" class="px-6 py-3">Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0"> রাস্তা পাকাকরন প্রসঙ্গে </a>
+                        </th>
+                        <td class="px-6 py-4">Shudeb Nath</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2019 05:46pm</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0">
+                            শিক্ষা-প্রতিষ্ঠানের সামনে সড়ক নির্মাণের আবেদন
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Arafat Hossain</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Apr 16, 2019 04:22am</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0" class="flex md:flex-row flex-col gap-2">
+                            <i>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
+                                />
+                              </svg>
+                            </i>
+                            <span>
+                              চাটখিল উপজেলার পাচগাঁও ইউনিয়নের গোলাম কিবরিয়া
+                              সড়কটির বেহাল দশা। কাচারী বাজার থেকে পাল্লা যাওয়ার
+                              একটি মাত্র সড়ক। এটি যেন মরনফাদ।
+                            </span>
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Jamil Monsur</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2019 05:46pm</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0">
+                            Donation to West Dealiai Nurani Madrasha
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Md. Nizam Uddin</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">2 Reply</td>
+                        <td class="px-6 py-4">Jun 2, 2017 09:40am</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0"> বিদ্যুৎয়ানের জন্য আবেদন। </a>
+                        </th>
+                        <td class="px-6 py-4">Monir Hasan</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">1 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2017 09:40pm</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0">
+                            LGED এর অন্তর্ভুক্ত রাস্তা কাঁচা রাস্তা পাকাকরণ
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Anisur Rahman</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Apr 13, 2019 05:09pm</td>
+                      </tr>
+                      <tr class="bg-white border-b">
+                        <th
+                          scope="row"
+                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
+                        >
+                          <a href="#0">
+                            প্রসঙ্গ: আউটসোর্সিং ট্রেনিং সেন্টার ও ডিজিটাল ল্যাব
+                            স্থাপন
+                          </a>
+                        </th>
+                        <td class="px-6 py-4">Rashidul Hasan</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">1 Reply</td>
+                        <td class="px-6 py-4">Apr 25, 2017 04:31pm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -574,10 +1231,10 @@
     <!-- footer area start -->
     <footer class="bg-white">
       <div
-        class="py-12 container mx-auto grid grid-cols-1 lg:grid-cols-6 gap-4"
+        class="container-fluid py-12 mx-auto grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-4"
       >
         <div
-          class="md:col-span-2 max-w-[314px] text-center md:text-start mx-auto md:mx-0"
+          class="col-span-2 md:max-w-[314px] max-w-[400px] sm:text-start text-center mx-auto sm:mx-0"
         >
           <a
             href="#"
@@ -716,7 +1373,7 @@
         </div>
       </div>
       <div class="border-b border-gray-300"></div>
-      <div class="container mx-auto">
+      <div class="container-fluid mx-auto">
         <div class="flex flex-wrap items-center justify-between">
           <small
             class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 font-normal"
