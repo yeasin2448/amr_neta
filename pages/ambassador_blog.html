@@ -79,7 +79,7 @@
               <li>
                 <a
                   href="ambassadors.html"
-                  class="md:text-green-500 text-whit px-2 hover:text-green-400 transition-all"
+                  class="md:text-green-500 text-white px-2 hover:text-green-400 transition-all"
                   >Ambassadors</a
                 >
               </li>
@@ -148,197 +148,90 @@
     </section>
     <!-- banner area ends  -->
 
-    <!-- ambassador profile start -->
-    <section class="amb_profile bg-[#fafbff] lg:py-10 py-8">
-      <div class="container-fluid mx-auto">
+    <!-- petition area start -->
+    <section class="petition_area bg-[#fafbff] lg:py-10 py-8">
+      <div class="container-fluid mx-auto flex flex-col gap-20">
         <div
-          x-data="{
-          openTab : 1,
-          activeClasses : 'bg-red-500 hover:bg-red-500',
-          inactiveClasses : 'hover:bg-red-500',
-          }"
-          class="max-w-[850px] w-full mx-auto"
+          class="bg-white p-4 rounded-md shadow-theme_shadow max-w-[1200px] mx-auto"
         >
-          <ul class="flex gap-3 whitespace-nowrap overflow-x-auto">
-            <li @click="openTab = 1">
-              <button
-                type="button"
-                :class="openTab === 1 ? activeClasses : inactiveClasses"
-                class="bg-green-500 p-2 w-full rounded-md text-white md:text-base text-sm font-normal"
-              >
-                Profile
-              </button>
-            </li>
-            <li @click="openTab = 2">
-              <button
-                type="button"
-                :class="openTab === 2 ? activeClasses : inactiveClasses"
-                class="bg-green-500 p-2 w-full rounded-md text-white md:text-base text-sm font-normal"
-              >
-                Questions
-              </button>
-            </li>
-          </ul>
-          <div
-            class="p-7 bg-white rounded-[10px] outline outline-1 outline-gray-300 mt-7"
-          >
-            <div x-show="openTab === 1">
-              <div class="mb-12 relative flex gap-4">
-                <div class="amb_pro_thumb">
-                  <img
-                    alt=""
-                    src="../src/img/profile/ambassador.png"
-                    class="w-[120px] h-[120px] mr-3 rounded-2xl outline outline-1 outline-white"
-                  />
-                </div>
-                <div class="amb_content">
-                  <h4
-                    class="text-black lg:text-3xl md:text-2xl text-xl font-medium"
-                  >
-                    Md Shahrukh Khan.
-                  </h4>
-                  <span class="text-[#838383] text-base font-normal"
-                    >Patuakhali, Patuakhali-2</span
-                  >
-                </div>
-              </div>
-              <form>
-                <div class="border-b border-gray-300 mb-6">
-                  <h6 class="text-gray-900 mb-1">Basic Information</h6>
-                </div>
-                <ul
-                  class="flex flex-col gap-3 text-[#4a4a4a] text-opacity-70 md:text-base text-sm font-normal mb-8"
-                >
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Name :</span>
-                    <span>Md Shahrukh Khan.</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Father’s Name :</span>
-                    <span>Md Shah Jahan Khan.</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Mother's Name :</span>
-                    <span>Dilruba Popy.</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Date of Birth :</span>
-                    <span>27.10.1997</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Permanent Address :</span>
-                    <span
-                      >Village: Bilbilash, P.O: Bilbilash, Upazila: Bauphal,
-                      District: Patuakhali.</span
-                    >
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Religion :</span>
-                    <span>Islam.</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Nationality :</span>
-                    <span>Bangladeshi.</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Hobbies :</span>
-                    <span>Travelling.</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Communication Language :</span>
-                    <span>English & Bangla.</span>
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-black">Contact No :</span>
-                    <span>01811313166, 01618313166.</span>
-                  </li>
-                </ul>
-                <div class="border-b border-gray-300 mb-6">
-                  <h6 class="text-gray-900 mb-1">Social Media Links</h6>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
-                  <div>
-                    <button
-                      class="group px-[22px] py-2 rounded-full font-medium text-base flex items-center justify-center hover:bg-green-25 bg-white border border-green-500 text-gray-700 hover:text-green-500 transition-colors duration-200"
-                    >
-                      <svg
-                        class="w-[14px] h-[14px] fill-gray-700 group-hover:fill-green-500 mr-[10px]"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
-                        ></path>
-                      </svg>
-                      Connect to Facebook
-                    </button>
-                  </div>
-                  <div>
-                    <button
-                      class="group px-[22px] py-2 rounded-full font-medium text-base flex items-center justify-center hover:bg-green-25 bg-white border border-green-500 text-gray-700 hover:text-green-500 transition-colors duration-200"
-                    >
-                      <svg
-                        class="w-[14px] h-[14px] fill-gray-700 group-hover:fill-green-500 mr-[10px]"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.55016 21.75C16.6045 21.75 21.5583 14.2468 21.5583 7.74192C21.5583 7.53098 21.5536 7.31536 21.5442 7.10442C22.5079 6.40752 23.3395 5.54432 24 4.55536C23.1025 4.95466 22.1496 5.21544 21.1739 5.3288C22.2013 4.71297 22.9705 3.74553 23.3391 2.60583C22.3726 3.17862 21.3156 3.58267 20.2134 3.80067C19.4708 3.01162 18.489 2.48918 17.4197 2.31411C16.3504 2.13905 15.2532 2.32111 14.2977 2.83216C13.3423 3.3432 12.5818 4.15477 12.1338 5.14137C11.6859 6.12798 11.5754 7.23468 11.8195 8.29036C9.86249 8.19215 7.94794 7.68377 6.19998 6.79816C4.45203 5.91255 2.90969 4.6695 1.67297 3.14958C1.0444 4.2333 0.852057 5.51571 1.13503 6.73615C1.418 7.9566 2.15506 9.02351 3.19641 9.72005C2.41463 9.69523 1.64998 9.48474 0.965625 9.10598V9.16692C0.964925 10.3042 1.3581 11.4066 2.07831 12.2868C2.79852 13.167 3.80132 13.7706 4.91625 13.995C4.19206 14.1932 3.43198 14.2221 2.69484 14.0794C3.00945 15.0575 3.62157 15.913 4.44577 16.5264C5.26997 17.1398 6.26512 17.4807 7.29234 17.5013C5.54842 18.8712 3.39417 19.6142 1.17656 19.6107C0.783287 19.6101 0.390399 19.586 0 19.5385C2.25286 20.9838 4.87353 21.7514 7.55016 21.75Z"
-                        ></path>
-                      </svg>
-                      Connect to Twitter
-                    </button>
-                  </div>
-                  <div>
-                    <button
-                      class="group px-[22px] py-2 rounded-full font-medium text-base flex items-center justify-center hover:bg-green-25 bg-white border border-green-500 text-gray-700 hover:text-green-500 transition-colors duration-200"
-                    >
-                      <svg
-                        class="w-[14px] h-[14px] fill-gray-700 group-hover:fill-green-500 mr-[10px]"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
-                        ></path>
-                      </svg>
-                      Connect to Linkedin
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div x-show="openTab === 2">
-              <h4
-                class="text-green-500 lg:text-3xl md:text-2xl text-xl font-medium"
-              >
-                All Questions Asked by Shahrukh Sayel
-              </h4>
-              <div class="qa_content py-10">
-                <p class="text-red-500 text-base font-normal">
-                  No Questions Available
-                </p>
-              </div>
-            </div>
+          <div class="ambs_thumb">
+            <img src="../src/img/ambassadors/ambs_thumb.png" alt="" />
           </div>
+          <div
+            class="flex items-center gap-2 text-black text-opacity-70 text-base font-normal"
+          >
+            <span class="text-green-500 font-medium"> amrNeta Admin, </span>
+            <span>Jan 17, 2017 07:02pm</span>
+          </div>
+          <div class="app_titile pb-6">
+            <h4 class="text-black lg:text-2xl text-xl font-medium">
+              আমারএমপি ডট কম প্রকল্পে ‘অ্যাম্বাসেডর’ নিয়োগ প্রসঙ্গে!
+            </h4>
+          </div>
+          <div
+            class="app_content flex flex-col gap-3 text-black text-opacity-70 md:text-base text-sm font-normal"
+          >
+            <p>
+              আমারএমপি প্রকল্পের জন্য আমরা সাড়ে তিনশ’ স্বেচ্ছাসেবী নিয়োগ দেওয়ার
+              পরিকল্পনা করছি। আমাদের কাছে স্বেচ্ছাসেবক নামের পরিবর্তে
+              অ্যাম্বাসেডর নাম ব্যবহারের জন্য বেশ কিছু সুপারিশ এসেছে। অতএব আমরা
+              আমার এমপি’র জন্য সাড়ে তিনশ’ অ্যাম্বাসেডর নিয়োগ করবো প্রতিটি সংসদীয়
+              আসনে বিপরীতে একজন করে এবং বাংলাদেশের প্রতিটা বিশ্ববিদ্যালয় থেকে ও
+              একজন করে। দেশের বাইরেও যারা অভিবাসী হিসেবে আছেন তারাও যেন যুক্ত
+              থাকতে পারেন তার জন্য প্রতিটা দেশ থেকেও একজন করে নিয়োগ করা হবে।
+            </p>
+            <p>
+              সাধারণত এই ধরনের নিয়োগে অনেকেরই প্রথম মাথায় আসে এই কাজে কি কি
+              যোগ্যতা লাগবে! সত্যি বলতে শিক্ষাগত যোগ্যতা আপনার একদম না থাকলেও
+              চলবে। তবে প্রথম কথাই হলো আপনি যদি ‘আই হেইট পলিটিক্স’ ধাঁচের কেউ
+              হয়ে থাকেন তাহলে প্রথমেই বাদ। আপনাকে হতে হবে রাজনীতি সচেতন এবং অতি
+              অবশ্যই আমাদের মহান মুক্তিযুদ্ধের স্বপক্ষের লোক। আপনার এলাকার এম পি
+              মহোদয়ের সাথে আপনার সুসম্পর্ক থাকলে, কারো কোন জিজ্ঞাসার জবাব
+              প্রদানের ব্যবস্থা করতে পারলে আপনি স্বেচ্ছাসেবক হিসেবে যোগ্য বলে
+              বিবেচিত হবেন। তবে বিশ্ববিদ্যালয় এবং প্রবাসী প্রতিনিধিদের কাজের ধরণ
+              একটু আলাদা হবে। তাদের কাজ হবে নিজ নিজ বিশ্ববিদ্যালয়/ দেশে থাকা
+              অন্যদের সমস্যাবলী যাতে যথাস্থানে পৌঁছানো যায় সেগুলা সমন্বয় করা।
+            </p>
+            <p>
+              প্রত্যেক প্রতিনিধিকে অবশ্যই ‘আমারএমপি’ প্রকল্পের একজন প্রমোটার হতে
+              হবে; কাজেই এই প্রকল্পের প্রতিটি আপডেট ( ফেইসবুক পেইজে প্রদত্ত
+              পোস্ট) আপনাকে আপনার ফেইসবুক এবং টুইটারে শেয়ার করতে হবে। তার মানে
+              দাঁড়াইল প্রতিনিধিদের অবশ্যই ফেইসবুক এবং টুইটার আইডি থাকতে হবে এবং
+              আপনাকে মোটামুটি শুদ্ধ বাংলায় টাইপিং জানতে হবে । আর এটা বলার তো
+              প্রয়োজনই নাই যে, আপনাকে এই সাইটের একজন রেজিস্টার্ড সদস্য হতে হবে।
+            </p>
+            <p>
+              এবং অবশ্যই প্রত্যেক প্রতিনিধির সম্মানীর ব্যবস্থা থাকবে। তবে এটা
+              নির্ভর করবে নিজ নিজ পারফরমেন্সের উপর।
+            </p>
+            <p>
+              আপনি যদি মনে করেন আপনি যোগ্য, তাহলে প্রস্তুতি নিন। অচিরেই আমরা এই
+              নিয়োগের প্রক্রিয়া শুরু করবো।
+            </p>
+            <p>সবাইকে ধন্যবাদ!</p>
+            <hr />
+            <p>
+              আপডেটঃ আগ্রহী প্রার্থীদের নিচের
+              <a href="#0" class="text-green-500">ফর্মটি</a> পুর্ণ করে পাঠানোর
+              অনুরোধ করছি। উল্লেখ্য, বিশ্ববিদ্যালয় এবং প্রবাসীদের জন্য আলাদাভাবে
+              নিয়োগ প্রক্রিয়া করা হবে।
+            </p>
+          </div>
+          <p class="mt-8 text-black text-opacity-70 text-base font-normal">
+            64531 views
+          </p>
         </div>
       </div>
     </section>
-    <!-- ambassador profile ends  -->
+    <!-- petition area ends  -->
 
     <!-- footer area start -->
     <footer class="bg-white">
       <div
-        class="py-12 container mx-auto grid grid-cols-1 lg:grid-cols-6 gap-4"
+        class="container-fluid py-12 mx-auto grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-4"
       >
         <div
-          class="md:col-span-2 max-w-[314px] text-center md:text-start mx-auto md:mx-0"
+          class="col-span-2 md:max-w-[314px] max-w-[400px] sm:text-start text-center mx-auto sm:mx-0"
         >
           <a
             href="#"
@@ -367,7 +260,7 @@
               placeholder="Type Here"
             />
             <button
-              class="px-5 py-2 rounded-r-md font-medium text-base flex items-center justify-center bg-green-500 text-white hover:bg-green-600 transition-colors duration-200 mr-4"
+              class="px-5 py-2 rounded-r-md font-medium text-base flex items-center justify-center bg-green-500 text-white hover:bg-red-500 transition-colors duration-200 mr-4"
             >
               Subscribe
             </button>
@@ -477,7 +370,7 @@
         </div>
       </div>
       <div class="border-b border-gray-300"></div>
-      <div class="container mx-auto">
+      <div class="container-fluid mx-auto">
         <div class="flex flex-wrap items-center justify-between">
           <small
             class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 font-normal"
@@ -489,7 +382,7 @@
           >
             <a href="#">
               <svg
-                class="w-5 h-5 fill-gray-400 hover:fill-green-500 ml-5"
+                class="w-5 h-5 fill-gray-400 hover:fill-primary-500 ml-5"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -502,7 +395,7 @@
             </a>
             <a href="#">
               <svg
-                class="w-5 h-5 fill-gray-400 hover:fill-green-500 ml-5"
+                class="w-5 h-5 fill-gray-400 hover:fill-primary-500 ml-5"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -515,7 +408,7 @@
             </a>
             <a href="#">
               <svg
-                class="w-5 h-5 fill-gray-400 hover:fill-green-500 ml-5"
+                class="w-5 h-5 fill-gray-400 hover:fill-primary-500 ml-5"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -528,7 +421,7 @@
             </a>
             <a href="#">
               <svg
-                class="w-5 h-5 fill-gray-400 hover:fill-green-500 ml-5"
+                class="w-5 h-5 fill-gray-400 hover:fill-primary-500 ml-5"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -543,7 +436,7 @@
             </a>
             <a href="#">
               <svg
-                class="w-5 h-5 fill-gray-400 hover:fill-green-500 ml-5"
+                class="w-5 h-5 fill-gray-400 hover:fill-primary-500 ml-5"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
