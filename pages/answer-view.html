@@ -43,7 +43,7 @@
               <li>
                 <a
                   href="neta-list.html"
-                  class="md:text-green-500 text-white px-2 hover:text-green-400 transition-all"
+                  class="px-2 hover:text-green-400 transition-all"
                   aria-current="true"
                   >Amr Neta</a
                 >
@@ -58,7 +58,7 @@
               <li>
                 <a
                   href="answer.html"
-                  class="px-2 hover:text-green-400 transition-all"
+                  class="md:text-green-500 text-white px-2 hover:text-green-400 transition-all"
                   >Answer</a
                 >
               </li>
@@ -331,7 +331,7 @@
       <div class="md:container container-fluid mx-auto">
         <div
           x-data="{
-            openTab : 0,
+            openTab : 3,
             activeClasses : 'text-black',
             inactiveClasses : 'text-white'
           }"
@@ -387,6 +387,13 @@
                   <a
                     href="#0"
                     class="hover:text-black hover:ml-1 transition-all"
+                    >Wealth 2014</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#0"
+                    class="hover:text-black hover:ml-1 transition-all"
                     >Manifesto</a
                   >
                 </li>
@@ -394,14 +401,15 @@
             </div>
             <div class="bg-gray-200 rounded-md p-4 text-center mt-6">
               <h4 class="text-black text-xl font-medium pb-4">Ambassador</h4>
-              <img
-                class="h-[150px] w-[150px] rounded-full bg-contain mx-auto"
-                src="../src/img/profile/ambassador.png"
-                alt=""
-              />
-              <p class="text-black mt-2 text-base font-normal">
-                Rabiul H Bhuyian
+              <p class="text-red-300 text-base font-normal">
+                No ambassador found for this MP
               </p>
+              <a
+                href="ambassador_blog.html"
+                class="text-black mt-8 text-base font-normal inline-block"
+              >
+                Apply to represent him
+              </a>
             </div>
           </div>
           <div class="lg:col-span-9 col-span-12">
@@ -657,145 +665,117 @@
             </div>
             <div
               x-show="openTab === 3"
-              class="bg-white shadow-theme_shadow rounded-md p-4 flex flex-col gap-5"
+              class="bg-white shadow-theme_shadow rounded-md p-5 flex flex-col gap-8"
             >
-              <div class="question_list">
-                <h4
-                  class="text-green-500 text-lg font-medium relative pl-7 pb-5 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+              <div class="qa_wrapper">
+                <div class="flex items-center justify-between gap-3">
+                  <h4
+                    class="text-green-500 text-lg font-medium relative pl-7 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
+                  >
+                    View Questions
+                  </h4>
+                  <span class="text-green-500 text-base font-normal"
+                    >1498 Views</span
+                  >
+                </div>
+                <div class="subject py-4">
+                  <h4
+                    class="flex items-center gap-3 text-black text-opacity-70 lg:text-2xl md:text-xl text-lg font-semibold"
+                  >
+                    Subject :
+                    <span>রাস্তা পাকাকরন প্রসঙ্গে</span>
+                  </h4>
+                </div>
+                <div class="qa_auth flex items-center gap-3">
+                  <img
+                    class="h-20 w-20 rounded-full"
+                    src="../src/img/ambassadors/01.png"
+                    alt=""
+                  />
+                  <div class="text_auth">
+                    <span
+                      class="flex items-center gap-2 text-black text-opacity-70 text-base font-normal"
+                    >
+                      Written By
+                      <span class="text-green-500">Shudeb Nath</span>
+                    </span>
+                    <small class="text-green-500 text-sm"
+                      >Mar 20, 2019 05:46pm</small
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-3 pt-4 text-black text-opacity-70 md:text-base text-sm font-normal"
                 >
-                  All Questions
-                </h4>
-
-                <div class="relative overflow-x-auto">
-                  <table class="w-full text-sm text-left text-gray-500">
-                    <thead class="text-sm text-[#838383] bg-gray-50">
-                      <tr>
-                        <th scope="col" class="px-6 py-3">Question</th>
-                        <th scope="col" class="px-6 py-3">Asked by</th>
-                        <th scope="col" class="px-6 py-3">Status</th>
-                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
-                          Replay Count
-                        </th>
-                        <th scope="col" class="px-6 py-3">Time</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="bg-white border-b">
-                        <th
-                          scope="row"
-                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
-                        >
-                          <a href="#0"> রাস্তা পাকাকরন প্রসঙ্গে </a>
-                        </th>
-                        <td class="px-6 py-4">Shudeb Nath</td>
-                        <td class="px-6 py-4">Public</td>
-                        <td class="px-6 py-4">0 Reply</td>
-                        <td class="px-6 py-4">Mar 20, 2019 05:46pm</td>
-                      </tr>
-                      <tr class="bg-white border-b">
-                        <th
-                          scope="row"
-                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
-                        >
-                          <a href="#0">
-                            শিক্ষা-প্রতিষ্ঠানের সামনে সড়ক নির্মাণের আবেদন
-                          </a>
-                        </th>
-                        <td class="px-6 py-4">Arafat Hossain</td>
-                        <td class="px-6 py-4">Public</td>
-                        <td class="px-6 py-4">0 Reply</td>
-                        <td class="px-6 py-4">Apr 16, 2019 04:22am</td>
-                      </tr>
-                      <tr class="bg-white border-b">
-                        <th
-                          scope="row"
-                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
-                        >
-                          <a href="#0" class="flex md:flex-row flex-col gap-2">
-                            <i>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-6 h-6"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
-                                />
-                              </svg>
-                            </i>
-                            <span>
-                              চাটখিল উপজেলার পাচগাঁও ইউনিয়নের গোলাম কিবরিয়া
-                              সড়কটির বেহাল দশা। কাচারী বাজার থেকে পাল্লা যাওয়ার
-                              একটি মাত্র সড়ক। এটি যেন মরনফাদ।
-                            </span>
-                          </a>
-                        </th>
-                        <td class="px-6 py-4">Jamil Monsur</td>
-                        <td class="px-6 py-4">Public</td>
-                        <td class="px-6 py-4">0 Reply</td>
-                        <td class="px-6 py-4">Mar 20, 2019 05:46pm</td>
-                      </tr>
-                      <tr class="bg-white border-b">
-                        <th
-                          scope="row"
-                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
-                        >
-                          <a href="#0">
-                            Donation to West Dealiai Nurani Madrasha
-                          </a>
-                        </th>
-                        <td class="px-6 py-4">Md. Nizam Uddin</td>
-                        <td class="px-6 py-4">Public</td>
-                        <td class="px-6 py-4">2 Reply</td>
-                        <td class="px-6 py-4">Jun 2, 2017 09:40am</td>
-                      </tr>
-                      <tr class="bg-white border-b">
-                        <th
-                          scope="row"
-                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
-                        >
-                          <a href="#0"> বিদ্যুৎয়ানের জন্য আবেদন। </a>
-                        </th>
-                        <td class="px-6 py-4">Monir Hasan</td>
-                        <td class="px-6 py-4">Public</td>
-                        <td class="px-6 py-4">1 Reply</td>
-                        <td class="px-6 py-4">Mar 20, 2017 09:40pm</td>
-                      </tr>
-                      <tr class="bg-white border-b">
-                        <th
-                          scope="row"
-                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
-                        >
-                          <a href="#0">
-                            LGED এর অন্তর্ভুক্ত রাস্তা কাঁচা রাস্তা পাকাকরণ
-                          </a>
-                        </th>
-                        <td class="px-6 py-4">Anisur Rahman</td>
-                        <td class="px-6 py-4">Public</td>
-                        <td class="px-6 py-4">0 Reply</td>
-                        <td class="px-6 py-4">Apr 13, 2019 05:09pm</td>
-                      </tr>
-                      <tr class="bg-white border-b">
-                        <th
-                          scope="row"
-                          class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
-                        >
-                          <a href="#0">
-                            প্রসঙ্গ: আউটসোর্সিং ট্রেনিং সেন্টার ও ডিজিটাল ল্যাব
-                            স্থাপন
-                          </a>
-                        </th>
-                        <td class="px-6 py-4">Rashidul Hasan</td>
-                        <td class="px-6 py-4">Public</td>
-                        <td class="px-6 py-4">1 Reply</td>
-                        <td class="px-6 py-4">Apr 25, 2017 04:31pm</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <p>
+                    মাননীয় সাংসদ সদস্য আমরা ২ নং নদোনা ইউনিয়নের ১নং ওয়ার্ডের
+                    বাসিন্দা। আমাদের দীর্ঘদিনের প্রানের দাবি শিবপুর-পাঁচবাড়ীয়া
+                    রোড পাকাকরণ ।
+                  </p>
+                  <p>
+                    আপনি এই মর্মে বিগত বছর আশ্বাস দিয়েছিলেন, মহোদয়ের কাছে ১ নং
+                    ওয়ার্ডবাসীর পক্ষে এই বিষয়ে অগ্রগতি জানতে চাই?
+                  </p>
+                </div>
+              </div>
+              <div class="anw_wrapper">
+                <div class="flex items-start gap-5">
+                  <div
+                    class="w-[calc(100%_-_120px)] bg-pink-100 rounded-md p-4"
+                  >
+                    <div
+                      class="flex items-center gap-2 text-black text-opacity-70 text-base font-normal"
+                    >
+                      <span>Written By: </span>
+                      <span class="text-green-500">
+                        H.M. Ibrahim - এইচ এম ইব্রাহিম
+                      </span>
+                    </div>
+                    <div class="flex items-center gap-2 py-3">
+                      <span class="text-red-500 text-base font-medium"
+                        >Mar 26, 2019 10:51pm</span
+                      >
+                      <span
+                        class="bg-green-500 text-white text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                        >Public</span
+                      >
+                    </div>
+                    <div
+                      class="pt-6 text-black text-opacity-70 md:text-base text-sm font-normal flex flex-col gap-3"
+                    >
+                      <p>আসসালামুয়ালাইকুম</p>
+                      <p>প্রিয় বাদল,</p>
+                      <p>
+                        সেশনজট মুক্ত শিক্ষা ব্যবস্থা প্রসঙ্গে প্রশ্নটি করার জন্য
+                        আপনাকে ধন্যবাদ। শিক্ষা জাতির মেরুদণ্ড, যে জাতি যত বেশি
+                        শিক্ষিত সেই জাতি ততবেশি উন্নত। আর তাই বর্তমান সরকার
+                        আধুনিক ও সৃজনশীল শিক্ষা ব্যবস্থা প্রনয়নের মাধ্যমে একটি
+                        শিক্ষিত জাতি গঠনে নিরলসভাবে কাজ করে যাচ্ছে। আপনার অবগতির
+                        জন্য জানাইতেছি যে, বর্তমানে শিক্ষা প্রতিষ্ঠান গুলোতে
+                        অতীতের মতো আর সেশনজট নেই। বর্তমান সরকারের অধীনে শিক্ষা
+                        ব্যবস্থার আমূল পরিবর্তন ও উন্নয়নের ফলে সেশনজট
+                        লক্ষণীয়হারে কমে এসেছে। শিক্ষা মন্ত্রনালয়ের তথ্য মতে
+                        অচিরেই সকল শিক্ষা প্রতিষ্ঠান সম্পূর্ণভাবে সেশনজট মুক্ত
+                        হবে। আপনার উজ্জল ভবিষ্যৎ কামনা করি।
+                      </p>
+                      <p>ধন্যবাদান্তে,</p>
+                      <p>এইচ এম ইব্রাহিম</p>
+                      <p>সংসদ সদস্য, নোয়াখালি-১</p>
+                      <p>
+                        সদস্য, রেলপথ মন্ত্রণালয় সম্পর্কিত সংসদীয় স্থায়ী কমিটি,
+                      </p>
+                      <p>
+                        সদস্য, ধর্ম মন্ত্রণালয় সম্পর্কিত সংসদীয় স্থায়ী কমিটি।
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ans_thumb w-[100px]">
+                    <img
+                      class="rounded-full border-2 border-green-500"
+                      src="../src/img/ambassadors/05.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -1081,117 +1061,136 @@
                 <h4
                   class="text-green-500 text-lg font-medium relative pl-7 pb-5 after:absolute after:block after:left-0 after:top-1 after:w-4 after:h-4 after:bg-red-500 after:rounded-sm"
                 >
-                  Wealth 2018 -- Continue
+                  Wealth 2014 -- Continue
                 </h4>
 
                 <div class="relative overflow-x-auto">
                   <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-sm text-[#838383] bg-gray-50">
                       <tr>
-                        <th scope="col" class="px-6 py-3">SL No.</th>
+                        <th scope="col" class="px-6 py-3">Question</th>
+                        <th scope="col" class="px-6 py-3">Asked by</th>
+                        <th scope="col" class="px-6 py-3">Status</th>
                         <th scope="col" class="px-6 py-3 whitespace-nowrap">
-                          Description of Asset
+                          Replay Count
                         </th>
-                        <th scope="col" class="px-6 py-3">Self</th>
-                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
-                          Spouse
-                        </th>
-                        <th scope="col" class="px-6 py-3">Dependent</th>
+                        <th scope="col" class="px-6 py-3">Time</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="bg-white border-b">
-                        <td class="px-6 py-4">1</td>
                         <th
                           scope="row"
                           class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
                         >
-                          Cash in hand
+                          <a href="#0"> রাস্তা পাকাকরন প্রসঙ্গে </a>
                         </th>
-
-                        <td class="px-6 py-4">00</td>
-                        <td class="px-6 py-4">00</td>
-                        <td class="px-6 py-4">00</td>
+                        <td class="px-6 py-4">Shudeb Nath</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2019 05:46pm</td>
                       </tr>
                       <tr class="bg-white border-b">
-                        <td class="px-6 py-4">2</td>
                         <th
                           scope="row"
                           class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
                         >
-                          Foreign currency
+                          <a href="#0">
+                            শিক্ষা-প্রতিষ্ঠানের সামনে সড়ক নির্মাণের আবেদন
+                          </a>
                         </th>
-
-                        <td class="px-6 py-4">00</td>
-                        <td class="px-6 py-4">00</td>
-                        <td class="px-6 py-4">00</td>
+                        <td class="px-6 py-4">Arafat Hossain</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Apr 16, 2019 04:22am</td>
                       </tr>
                       <tr class="bg-white border-b">
-                        <td class="px-6 py-4">3</td>
                         <th
                           scope="row"
                           class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
                         >
-                          Deposit in Bank or Financial institutions
+                          <a href="#0" class="flex md:flex-row flex-col gap-2">
+                            <i>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
+                                />
+                              </svg>
+                            </i>
+                            <span>
+                              চাটখিল উপজেলার পাচগাঁও ইউনিয়নের গোলাম কিবরিয়া
+                              সড়কটির বেহাল দশা। কাচারী বাজার থেকে পাল্লা যাওয়ার
+                              একটি মাত্র সড়ক। এটি যেন মরনফাদ।
+                            </span>
+                          </a>
                         </th>
-                        <td class="px-6 py-4">4,63,21,993.00</td>
-                        <td class="px-6 py-4">68,14,208.00</td>
-                        <td class="px-6 py-4">00</td>
+                        <td class="px-6 py-4">Jamil Monsur</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2019 05:46pm</td>
                       </tr>
                       <tr class="bg-white border-b">
-                        <td class="px-6 py-4">4</td>
                         <th
                           scope="row"
                           class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
                         >
-                          Bond, LC, Company share
+                          <a href="#0">
+                            Donation to West Dealiai Nurani Madrasha
+                          </a>
                         </th>
-
-                        <td class="px-6 py-4">5,00,000.00</td>
-                        <td class="px-6 py-4">1,20,000.00</td>
-                        <td class="px-6 py-4">00</td>
+                        <td class="px-6 py-4">Md. Nizam Uddin</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">2 Reply</td>
+                        <td class="px-6 py-4">Jun 2, 2017 09:40am</td>
                       </tr>
                       <tr class="bg-white border-b">
-                        <td class="px-6 py-4">5</td>
                         <th
                           scope="row"
                           class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
                         >
-                          Investment in Postal, Savings certificate or
-                          Sanchayapatra
+                          <a href="#0"> বিদ্যুৎয়ানের জন্য আবেদন। </a>
                         </th>
-
-                        <td class="px-6 py-4">00</td>
-                        <td class="px-6 py-4">51,82,366/-(dps)</td>
-                        <td class="px-6 py-4">00</td>
+                        <td class="px-6 py-4">Monir Hasan</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">1 Reply</td>
+                        <td class="px-6 py-4">Mar 20, 2017 09:40pm</td>
                       </tr>
                       <tr class="bg-white border-b">
-                        <td class="px-6 py-4">6</td>
                         <th
                           scope="row"
                           class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
                         >
-                          Bus, Truck, Auto mobile, Motor cycle
+                          <a href="#0">
+                            LGED এর অন্তর্ভুক্ত রাস্তা কাঁচা রাস্তা পাকাকরণ
+                          </a>
                         </th>
-
-                        <td class="px-6 py-4">
-                          pajero-27,42,958+jeep-50,00,000+jeep-73,00,000.00
-                        </td>
-                        <td class="px-6 py-4">00</td>
-                        <td class="px-6 py-4">00</td>
+                        <td class="px-6 py-4">Anisur Rahman</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">0 Reply</td>
+                        <td class="px-6 py-4">Apr 13, 2019 05:09pm</td>
                       </tr>
                       <tr class="bg-white border-b">
-                        <td class="px-6 py-4">7</td>
                         <th
                           scope="row"
                           class="px-6 py-4 font-normal text-green-500 min-w-[250px]"
                         >
-                          Gold and Jewelries
+                          <a href="#0">
+                            প্রসঙ্গ: আউটসোর্সিং ট্রেনিং সেন্টার ও ডিজিটাল ল্যাব
+                            স্থাপন
+                          </a>
                         </th>
-
-                        <td class="px-6 py-4">00</td>
-                        <td class="px-6 py-4">72,000.00</td>
-                        <td class="px-6 py-4">00</td>
+                        <td class="px-6 py-4">Rashidul Hasan</td>
+                        <td class="px-6 py-4">Public</td>
+                        <td class="px-6 py-4">1 Reply</td>
+                        <td class="px-6 py-4">Apr 25, 2017 04:31pm</td>
                       </tr>
                     </tbody>
                   </table>
