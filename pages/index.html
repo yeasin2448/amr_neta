@@ -153,54 +153,386 @@
                 class="w-[calc(100%_/_2)] sm:p-4 p-3 relative after:absolute after:block after:top-1/2 after:right-0 after:-translate-y-1/2 after:w-[1px] after:h-[calc(100%_-_40px)] after:bg-red-500 before:absolute before:bottom-0 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:w-[calc(100%_-_40px)] before:h-[.1px] before:bg-red-500"
               >
                 <div class="banner_thumb w-full h-full aspect-w-1 aspect-h-1">
-                  <iframe
-                    class="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/embed/QPdyUzvLq2s"
-                    title="যুক্তরাষ্ট্র বাংলাদেশে হস্তক্ষেপ করছে রাশিয়ার এই দাবি ভিত্তিহীন । ম্যাথিউ মিলার । পররাষ্ট্র দপ্তর"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div
+                    class="[&_[x-cloak]]:hidden"
+                    x-data="{ modalOpen: false}"
+                  >
+                    <!-- Video thumbnail -->
+                    <button
+                      class="relative h-full flex justify-center items-center focus:outline-none focus-visible:ring rounded-md group"
+                      @click="modalOpen = !modalOpen"
+                      aria-controls="modal"
+                      aria-label="Watch the video"
+                    >
+                      <img
+                        class="h-full rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                        src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                        alt="Modal video thumbnail"
+                      />
+                      <!-- Play icon -->
+                      <svg
+                        class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="72"
+                        height="72"
+                      >
+                        <circle
+                          class="fill-white"
+                          cx="36"
+                          cy="36"
+                          r="36"
+                          fill-opacity=".8"
+                        />
+                        <path
+                          class="fill-red-500 drop-shadow-2xl"
+                          d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                        />
+                      </svg>
+                    </button>
+                    <!-- End: Video thumbnail -->
+
+                    <!-- Modal backdrop -->
+                    <div
+                      class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                      x-show="modalOpen"
+                      @click.outside="!modalOpen"
+                      x-transition:enter="transition ease-out duration-200"
+                      x-transition:enter-start="opacity-0"
+                      x-transition:enter-end="opacity-100"
+                      x-transition:leave="transition ease-out duration-100"
+                      x-transition:leave-start="opacity-100"
+                      x-transition:leave-end="opacity-0"
+                      aria-hidden="true"
+                      x-cloak
+                    ></div>
+                    <!-- End: Modal backdrop -->
+
+                    <!-- Modal dialog -->
+                    <div
+                      id="modal"
+                      class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                      role="dialog"
+                      aria-modal="true"
+                      x-show="modalOpen"
+                      x-transition:enter="transition ease-out duration-300"
+                      x-transition:enter-start="opacity-0 scale-75"
+                      x-transition:enter-end="opacity-100 scale-100"
+                      x-transition:leave="transition ease-out duration-200"
+                      x-transition:leave-start="opacity-100 scale-100"
+                      x-transition:leave-end="opacity-0 scale-75"
+                      x-cloak
+                    >
+                      <div
+                        class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                      >
+                        <div
+                          class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                          @click.outside="modalOpen = false"
+                          @keydown.escape.window="modalOpen = false"
+                        >
+                          <iframe
+                            x-show="modalOpen"
+                            @click.outside="!modalOpen"
+                            class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                            src="https://www.youtube.com/embed/9snnTSmgiMc"
+                            title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                            frameborder="0"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End: Modal dialog -->
+                  </div>
                 </div>
               </div>
               <div
                 class="w-[calc(100%_/_2)] sm:p-4 p-3 relative before:absolute before:bottom-0 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:w-[calc(100%_-_40px)] before:h-[.1px] before:bg-red-500"
               >
                 <div class="banner_thumb w-full h-full aspect-w-1 aspect-h-1">
-                  <iframe
-                    class="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/embed/a0ng4Z4Ll4A"
-                    title="বাইডেন-সুনাকের সাথে ছবির কূটনৈতিক গুরুত্ব কী?"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div
+                    class="[&_[x-cloak]]:hidden"
+                    x-data="{ modalOpen: false}"
+                  >
+                    <!-- Video thumbnail -->
+                    <button
+                      class="relative h-full flex justify-center items-center focus:outline-none focus-visible:ring rounded-md group"
+                      @click="modalOpen = !modalOpen"
+                      aria-controls="modal"
+                      aria-label="Watch the video"
+                    >
+                      <img
+                        class="h-full rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                        src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                        alt="Modal video thumbnail"
+                      />
+                      <!-- Play icon -->
+                      <svg
+                        class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="72"
+                        height="72"
+                      >
+                        <circle
+                          class="fill-white"
+                          cx="36"
+                          cy="36"
+                          r="36"
+                          fill-opacity=".8"
+                        />
+                        <path
+                          class="fill-red-500 drop-shadow-2xl"
+                          d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                        />
+                      </svg>
+                    </button>
+                    <!-- End: Video thumbnail -->
+
+                    <!-- Modal backdrop -->
+                    <div
+                      class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                      x-show="modalOpen"
+                      @click.outside="!modalOpen"
+                      x-transition:enter="transition ease-out duration-200"
+                      x-transition:enter-start="opacity-0"
+                      x-transition:enter-end="opacity-100"
+                      x-transition:leave="transition ease-out duration-100"
+                      x-transition:leave-start="opacity-100"
+                      x-transition:leave-end="opacity-0"
+                      aria-hidden="true"
+                      x-cloak
+                    ></div>
+                    <!-- End: Modal backdrop -->
+
+                    <!-- Modal dialog -->
+                    <div
+                      id="modal"
+                      class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                      role="dialog"
+                      aria-modal="true"
+                      x-show="modalOpen"
+                      x-transition:enter="transition ease-out duration-300"
+                      x-transition:enter-start="opacity-0 scale-75"
+                      x-transition:enter-end="opacity-100 scale-100"
+                      x-transition:leave="transition ease-out duration-200"
+                      x-transition:leave-start="opacity-100 scale-100"
+                      x-transition:leave-end="opacity-0 scale-75"
+                      x-cloak
+                    >
+                      <div
+                        class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                      >
+                        <div
+                          class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                          @click.outside="modalOpen = false"
+                          @keydown.escape.window="modalOpen = false"
+                        >
+                          <iframe
+                            x-show="modalOpen"
+                            @click.outside="!modalOpen"
+                            class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                            src="https://www.youtube.com/embed/9snnTSmgiMc"
+                            title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                            frameborder="0"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End: Modal dialog -->
+                  </div>
                 </div>
               </div>
               <div
                 class="w-[calc(100%_/_2)] sm:p-4 p-3 relative after:absolute after:block after:top-1/2 after:right-0 after:-translate-y-1/2 after:w-[1px] after:h-[calc(100%_-_40px)] after:bg-red-500"
               >
                 <div class="banner_thumb w-full h-full aspect-w-1 aspect-h-1">
-                  <iframe
-                    class="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/embed/azrmNY9s-DA"
-                    title="যুক্তরাষ্ট্রের গৃহযুদ্ধের সূচনা যেভাবে | বিশ্ব ইতিহাস | Slavery in the United States | Somoy TV"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div
+                    class="[&_[x-cloak]]:hidden"
+                    x-data="{ modalOpen: false}"
+                  >
+                    <!-- Video thumbnail -->
+                    <button
+                      class="relative h-full flex justify-center items-center focus:outline-none focus-visible:ring rounded-md group"
+                      @click="modalOpen = !modalOpen"
+                      aria-controls="modal"
+                      aria-label="Watch the video"
+                    >
+                      <img
+                        class="h-full rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                        src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                        alt="Modal video thumbnail"
+                      />
+                      <!-- Play icon -->
+                      <svg
+                        class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="72"
+                        height="72"
+                      >
+                        <circle
+                          class="fill-white"
+                          cx="36"
+                          cy="36"
+                          r="36"
+                          fill-opacity=".8"
+                        />
+                        <path
+                          class="fill-red-500 drop-shadow-2xl"
+                          d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                        />
+                      </svg>
+                    </button>
+                    <!-- End: Video thumbnail -->
+
+                    <!-- Modal backdrop -->
+                    <div
+                      class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                      x-show="modalOpen"
+                      @click.outside="!modalOpen"
+                      x-transition:enter="transition ease-out duration-200"
+                      x-transition:enter-start="opacity-0"
+                      x-transition:enter-end="opacity-100"
+                      x-transition:leave="transition ease-out duration-100"
+                      x-transition:leave-start="opacity-100"
+                      x-transition:leave-end="opacity-0"
+                      aria-hidden="true"
+                      x-cloak
+                    ></div>
+                    <!-- End: Modal backdrop -->
+
+                    <!-- Modal dialog -->
+                    <div
+                      id="modal"
+                      class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                      role="dialog"
+                      aria-modal="true"
+                      x-show="modalOpen"
+                      x-transition:enter="transition ease-out duration-300"
+                      x-transition:enter-start="opacity-0 scale-75"
+                      x-transition:enter-end="opacity-100 scale-100"
+                      x-transition:leave="transition ease-out duration-200"
+                      x-transition:leave-start="opacity-100 scale-100"
+                      x-transition:leave-end="opacity-0 scale-75"
+                      x-cloak
+                    >
+                      <div
+                        class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                      >
+                        <div
+                          class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                          @click.outside="modalOpen = false"
+                          @keydown.escape.window="modalOpen = false"
+                        >
+                          <iframe
+                            x-show="modalOpen"
+                            @click.outside="!modalOpen"
+                            class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                            src="https://www.youtube.com/embed/9snnTSmgiMc"
+                            title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                            frameborder="0"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End: Modal dialog -->
+                  </div>
                 </div>
               </div>
               <div class="w-[calc(100%_/_2)] sm:p-4 p-3">
                 <div class="banner_thumb w-full h-full aspect-w-1 aspect-h-1">
-                  <iframe
-                    class="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/embed/GZGkCLBtyjs"
-                    title="নেপোলিয়ন কী বলেছিল টিপু সুলতানকে ? The Tiger of Mysore | Empire ep.3 | Labid Rahat"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div
+                    class="[&_[x-cloak]]:hidden"
+                    x-data="{ modalOpen: false}"
+                  >
+                    <!-- Video thumbnail -->
+                    <button
+                      class="relative h-full flex justify-center items-center focus:outline-none focus-visible:ring rounded-md group"
+                      @click="modalOpen = !modalOpen"
+                      aria-controls="modal"
+                      aria-label="Watch the video"
+                    >
+                      <img
+                        class="h-full rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                        src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                        alt="Modal video thumbnail"
+                      />
+                      <!-- Play icon -->
+                      <svg
+                        class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="72"
+                        height="72"
+                      >
+                        <circle
+                          class="fill-white"
+                          cx="36"
+                          cy="36"
+                          r="36"
+                          fill-opacity=".8"
+                        />
+                        <path
+                          class="fill-red-500 drop-shadow-2xl"
+                          d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                        />
+                      </svg>
+                    </button>
+                    <!-- End: Video thumbnail -->
+
+                    <!-- Modal backdrop -->
+                    <div
+                      class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                      x-show="modalOpen"
+                      @click.outside="!modalOpen"
+                      x-transition:enter="transition ease-out duration-200"
+                      x-transition:enter-start="opacity-0"
+                      x-transition:enter-end="opacity-100"
+                      x-transition:leave="transition ease-out duration-100"
+                      x-transition:leave-start="opacity-100"
+                      x-transition:leave-end="opacity-0"
+                      aria-hidden="true"
+                      x-cloak
+                    ></div>
+                    <!-- End: Modal backdrop -->
+
+                    <!-- Modal dialog -->
+                    <div
+                      id="modal"
+                      class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                      role="dialog"
+                      aria-modal="true"
+                      x-show="modalOpen"
+                      x-transition:enter="transition ease-out duration-300"
+                      x-transition:enter-start="opacity-0 scale-75"
+                      x-transition:enter-end="opacity-100 scale-100"
+                      x-transition:leave="transition ease-out duration-200"
+                      x-transition:leave-start="opacity-100 scale-100"
+                      x-transition:leave-end="opacity-0 scale-75"
+                      x-cloak
+                    >
+                      <div
+                        class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                      >
+                        <div
+                          class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                          @click.outside="modalOpen = false"
+                          @keydown.escape.window="modalOpen = false"
+                        >
+                          <iframe
+                            x-show="modalOpen"
+                            @click.outside="!modalOpen"
+                            class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                            src="https://www.youtube.com/embed/9snnTSmgiMc"
+                            title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                            frameborder="0"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End: Modal dialog -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -1400,92 +1732,780 @@
                 class="grid sm:grid-cols-2 gap-3 max-h-[600px] overflow-y-auto"
               >
                 <div class="video_item">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/akzeX7E45ws"
-                    title="কী দেখে বুঝবেন হাসিনার পতন আসন্ন ? Pinaki Bhattacharya || The Untold"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div class="flex justify-center">
+                    <!-- Modal video component -->
+                    <div
+                      class="[&_[x-cloak]]:hidden"
+                      x-data="{ modalOpen: false}"
+                    >
+                      <!-- Video thumbnail -->
+                      <button
+                        class="relative flex justify-center items-center focus:outline-none focus-visible:ring rounded-3xl group"
+                        @click="modalOpen = !modalOpen"
+                        aria-controls="modal"
+                        aria-label="Watch the video"
+                      >
+                        <img
+                          class="rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                          src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                          alt="Modal video thumbnail"
+                        />
+                        <!-- Play icon -->
+                        <svg
+                          class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                        >
+                          <circle
+                            class="fill-white"
+                            cx="36"
+                            cy="36"
+                            r="36"
+                            fill-opacity=".8"
+                          />
+                          <path
+                            class="fill-red-500 drop-shadow-2xl"
+                            d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- End: Video thumbnail -->
+
+                      <!-- Modal backdrop -->
+                      <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        @click.outside="!modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        aria-hidden="true"
+                        x-cloak
+                      ></div>
+                      <!-- End: Modal backdrop -->
+
+                      <!-- Modal dialog -->
+                      <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                      >
+                        <div
+                          class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                        >
+                          <div
+                            class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                            @click.outside="modalOpen = false"
+                            @keydown.escape.window="modalOpen = false"
+                          >
+                            <iframe
+                              x-show="modalOpen"
+                              @click.outside="!modalOpen"
+                              class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                              src="https://www.youtube.com/embed/9snnTSmgiMc"
+                              title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                              frameborder="0"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Modal dialog -->
+                    </div>
+                    <!-- End: Modal video component -->
+                  </div>
                 </div>
                 <div class="video_item">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/daEFCFmWEbE"
-                    title="আমাদের কি কখনো শিক্ষা হবেনা? | MTFE 11,000 Crore Scam"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div class="flex justify-center">
+                    <!-- Modal video component -->
+                    <div
+                      class="[&_[x-cloak]]:hidden"
+                      x-data="{ modalOpen: false}"
+                    >
+                      <!-- Video thumbnail -->
+                      <button
+                        class="relative flex justify-center items-center focus:outline-none focus-visible:ring rounded-3xl group"
+                        @click="modalOpen = !modalOpen"
+                        aria-controls="modal"
+                        aria-label="Watch the video"
+                      >
+                        <img
+                          class="rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                          src="https://i4.ytimg.com/vi/glT4XiKynoY/hqdefault.jpg"
+                          alt="Modal video thumbnail"
+                        />
+                        <!-- Play icon -->
+                        <svg
+                          class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                        >
+                          <circle
+                            class="fill-white"
+                            cx="36"
+                            cy="36"
+                            r="36"
+                            fill-opacity=".8"
+                          />
+                          <path
+                            class="fill-red-500 drop-shadow-2xl"
+                            d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- End: Video thumbnail -->
+
+                      <!-- Modal backdrop -->
+                      <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        @click.outside="!modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        aria-hidden="true"
+                        x-cloak
+                      ></div>
+                      <!-- End: Modal backdrop -->
+
+                      <!-- Modal dialog -->
+                      <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                      >
+                        <div
+                          class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                        >
+                          <div
+                            class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                            @click.outside="modalOpen = false"
+                            @keydown.escape.window="modalOpen = false"
+                          >
+                            <iframe
+                              x-show="modalOpen"
+                              @click.outside="!modalOpen"
+                              class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                              src="https://www.youtube.com/embed/9snnTSmgiMc"
+                              title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                              frameborder="0"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Modal dialog -->
+                    </div>
+                    <!-- End: Modal video component -->
+                  </div>
                 </div>
                 <div class="video_item">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/6ZehQFszNw8"
-                    title="MTFE কিভাবে এত বড় প্রতারণা করল ?"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div class="flex justify-center">
+                    <!-- Modal video component -->
+                    <div
+                      class="[&_[x-cloak]]:hidden"
+                      x-data="{ modalOpen: false}"
+                    >
+                      <!-- Video thumbnail -->
+                      <button
+                        class="relative flex justify-center items-center focus:outline-none focus-visible:ring rounded-3xl group"
+                        @click="modalOpen = !modalOpen"
+                        aria-controls="modal"
+                        aria-label="Watch the video"
+                      >
+                        <img
+                          class="rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                          src="https://i4.ytimg.com/vi/3izPz7RSvtk/hqdefault.jpg"
+                          alt="Modal video thumbnail"
+                        />
+                        <!-- Play icon -->
+                        <svg
+                          class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                        >
+                          <circle
+                            class="fill-white"
+                            cx="36"
+                            cy="36"
+                            r="36"
+                            fill-opacity=".8"
+                          />
+                          <path
+                            class="fill-red-500 drop-shadow-2xl"
+                            d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- End: Video thumbnail -->
+
+                      <!-- Modal backdrop -->
+                      <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        @click.outside="!modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        aria-hidden="true"
+                        x-cloak
+                      ></div>
+                      <!-- End: Modal backdrop -->
+
+                      <!-- Modal dialog -->
+                      <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                      >
+                        <div
+                          class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                        >
+                          <div
+                            class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                            @click.outside="modalOpen = false"
+                            @keydown.escape.window="modalOpen = false"
+                          >
+                            <iframe
+                              x-show="modalOpen"
+                              @click.outside="!modalOpen"
+                              class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                              src="https://www.youtube.com/embed/9snnTSmgiMc"
+                              title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                              frameborder="0"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Modal dialog -->
+                    </div>
+                    <!-- End: Modal video component -->
+                  </div>
                 </div>
                 <div class="video_item">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/6MXM7TyQPbU"
-                    title="শ্রীলংকার অর্থনীতি ঘুরে দাঁড়ালো কীভাবে ?"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div class="flex justify-center">
+                    <!-- Modal video component -->
+                    <div
+                      class="[&_[x-cloak]]:hidden"
+                      x-data="{ modalOpen: false}"
+                    >
+                      <!-- Video thumbnail -->
+                      <button
+                        class="relative flex justify-center items-center focus:outline-none focus-visible:ring rounded-3xl group"
+                        @click="modalOpen = !modalOpen"
+                        aria-controls="modal"
+                        aria-label="Watch the video"
+                      >
+                        <img
+                          class="rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                          src="https://i2.ytimg.com/vi/UFsuz3DAvKo/hqdefault.jpg"
+                          alt="Modal video thumbnail"
+                        />
+                        <!-- Play icon -->
+                        <svg
+                          class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                        >
+                          <circle
+                            class="fill-white"
+                            cx="36"
+                            cy="36"
+                            r="36"
+                            fill-opacity=".8"
+                          />
+                          <path
+                            class="fill-red-500 drop-shadow-2xl"
+                            d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- End: Video thumbnail -->
+
+                      <!-- Modal backdrop -->
+                      <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        @click.outside="!modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        aria-hidden="true"
+                        x-cloak
+                      ></div>
+                      <!-- End: Modal backdrop -->
+
+                      <!-- Modal dialog -->
+                      <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                      >
+                        <div
+                          class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                        >
+                          <div
+                            class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                            @click.outside="modalOpen = false"
+                            @keydown.escape.window="modalOpen = false"
+                          >
+                            <iframe
+                              x-show="modalOpen"
+                              @click.outside="!modalOpen"
+                              class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                              src="https://www.youtube.com/embed/9snnTSmgiMc"
+                              title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                              frameborder="0"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Modal dialog -->
+                    </div>
+                    <!-- End: Modal video component -->
+                  </div>
                 </div>
                 <div class="video_item">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/FBr5lP_9H3E"
-                    title="ভূরাজনীতি: তেল বাণিজ্য নিয়ন্ত্রণে তুরুপের তাস হরমুজ প্রণালী | Geo Politics | Strait of Hormuz"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div class="flex justify-center">
+                    <!-- Modal video component -->
+                    <div
+                      class="[&_[x-cloak]]:hidden"
+                      x-data="{ modalOpen: false}"
+                    >
+                      <!-- Video thumbnail -->
+                      <button
+                        class="relative flex justify-center items-center focus:outline-none focus-visible:ring rounded-3xl group"
+                        @click="modalOpen = !modalOpen"
+                        aria-controls="modal"
+                        aria-label="Watch the video"
+                      >
+                        <img
+                          class="rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                          src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                          alt="Modal video thumbnail"
+                        />
+                        <!-- Play icon -->
+                        <svg
+                          class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                        >
+                          <circle
+                            class="fill-white"
+                            cx="36"
+                            cy="36"
+                            r="36"
+                            fill-opacity=".8"
+                          />
+                          <path
+                            class="fill-red-500 drop-shadow-2xl"
+                            d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- End: Video thumbnail -->
+
+                      <!-- Modal backdrop -->
+                      <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        @click.outside="!modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        aria-hidden="true"
+                        x-cloak
+                      ></div>
+                      <!-- End: Modal backdrop -->
+
+                      <!-- Modal dialog -->
+                      <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                      >
+                        <div
+                          class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                        >
+                          <div
+                            class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                            @click.outside="modalOpen = false"
+                            @keydown.escape.window="modalOpen = false"
+                          >
+                            <iframe
+                              x-show="modalOpen"
+                              @click.outside="!modalOpen"
+                              class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                              src="https://www.youtube.com/embed/9snnTSmgiMc"
+                              title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                              frameborder="0"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Modal dialog -->
+                    </div>
+                    <!-- End: Modal video component -->
+                  </div>
                 </div>
                 <div class="video_item">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/CmhUjKnZjg0"
-                    title="ভূরাজনীতি: বিশ্বব্যাপী প্রযুক্তি যুদ্ধের কেন্দ্র তাইওয়ান? | Geopolitics | Taiwan | Somoy TV"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div class="flex justify-center">
+                    <!-- Modal video component -->
+                    <div
+                      class="[&_[x-cloak]]:hidden"
+                      x-data="{ modalOpen: false}"
+                    >
+                      <!-- Video thumbnail -->
+                      <button
+                        class="relative flex justify-center items-center focus:outline-none focus-visible:ring rounded-3xl group"
+                        @click="modalOpen = !modalOpen"
+                        aria-controls="modal"
+                        aria-label="Watch the video"
+                      >
+                        <img
+                          class="rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                          src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                          alt="Modal video thumbnail"
+                        />
+                        <!-- Play icon -->
+                        <svg
+                          class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                        >
+                          <circle
+                            class="fill-white"
+                            cx="36"
+                            cy="36"
+                            r="36"
+                            fill-opacity=".8"
+                          />
+                          <path
+                            class="fill-red-500 drop-shadow-2xl"
+                            d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- End: Video thumbnail -->
+
+                      <!-- Modal backdrop -->
+                      <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        @click.outside="!modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        aria-hidden="true"
+                        x-cloak
+                      ></div>
+                      <!-- End: Modal backdrop -->
+
+                      <!-- Modal dialog -->
+                      <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                      >
+                        <div
+                          class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                        >
+                          <div
+                            class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                            @click.outside="modalOpen = false"
+                            @keydown.escape.window="modalOpen = false"
+                          >
+                            <iframe
+                              x-show="modalOpen"
+                              @click.outside="!modalOpen"
+                              class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                              src="https://www.youtube.com/embed/9snnTSmgiMc"
+                              title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                              frameborder="0"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Modal dialog -->
+                    </div>
+                    <!-- End: Modal video component -->
+                  </div>
                 </div>
                 <div class="video_item">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/FdSU19p8BmU"
-                    title="চীন-ভারত দ্বন্দ্বঃ কোন দেশ কাকে সমর্থন দেবে? | দৃশ্যপট | India China Clash | Somoy TV"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div class="flex justify-center">
+                    <!-- Modal video component -->
+                    <div
+                      class="[&_[x-cloak]]:hidden"
+                      x-data="{ modalOpen: false}"
+                    >
+                      <!-- Video thumbnail -->
+                      <button
+                        class="relative flex justify-center items-center focus:outline-none focus-visible:ring rounded-3xl group"
+                        @click="modalOpen = !modalOpen"
+                        aria-controls="modal"
+                        aria-label="Watch the video"
+                      >
+                        <img
+                          class="rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                          src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                          alt="Modal video thumbnail"
+                        />
+                        <!-- Play icon -->
+                        <svg
+                          class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                        >
+                          <circle
+                            class="fill-white"
+                            cx="36"
+                            cy="36"
+                            r="36"
+                            fill-opacity=".8"
+                          />
+                          <path
+                            class="fill-red-500 drop-shadow-2xl"
+                            d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- End: Video thumbnail -->
+
+                      <!-- Modal backdrop -->
+                      <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        @click.outside="!modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        aria-hidden="true"
+                        x-cloak
+                      ></div>
+                      <!-- End: Modal backdrop -->
+
+                      <!-- Modal dialog -->
+                      <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                      >
+                        <div
+                          class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                        >
+                          <div
+                            class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                            @click.outside="modalOpen = false"
+                            @keydown.escape.window="modalOpen = false"
+                          >
+                            <iframe
+                              x-show="modalOpen"
+                              @click.outside="!modalOpen"
+                              class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                              src="https://www.youtube.com/embed/9snnTSmgiMc"
+                              title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                              frameborder="0"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Modal dialog -->
+                    </div>
+                    <!-- End: Modal video component -->
+                  </div>
                 </div>
                 <div class="video_item">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/BRH0Nog7yt4"
-                    title="কাশ্মীর সংকটের ইতিহাস | বিশ্ব ইতিহাস | পর্ব-২ | History of Kashmir Crisis | India-Pakistan| Somoy TV"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <div class="flex justify-center">
+                    <!-- Modal video component -->
+                    <div
+                      class="[&_[x-cloak]]:hidden"
+                      x-data="{ modalOpen: false}"
+                    >
+                      <!-- Video thumbnail -->
+                      <button
+                        class="relative flex justify-center items-center focus:outline-none focus-visible:ring rounded-3xl group"
+                        @click="modalOpen = !modalOpen"
+                        aria-controls="modal"
+                        aria-label="Watch the video"
+                      >
+                        <img
+                          class="rounded-md shadow-theme_shadow transition-shadow duration-300 ease-in-out"
+                          src="https://i4.ytimg.com/vi/7GAdcX9Kyvg/hqdefault.jpg"
+                          alt="Modal video thumbnail"
+                        />
+                        <!-- Play icon -->
+                        <svg
+                          class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="72"
+                          height="72"
+                        >
+                          <circle
+                            class="fill-white"
+                            cx="36"
+                            cy="36"
+                            r="36"
+                            fill-opacity=".8"
+                          />
+                          <path
+                            class="fill-red-500 drop-shadow-2xl"
+                            d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- End: Video thumbnail -->
+
+                      <!-- Modal backdrop -->
+                      <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        @click.outside="!modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        aria-hidden="true"
+                        x-cloak
+                      ></div>
+                      <!-- End: Modal backdrop -->
+
+                      <!-- Modal dialog -->
+                      <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                      >
+                        <div
+                          class="2xl:w-[50%] xl:w-[60%] md:w-[70%] sm:w-[80%] w-[90%] mx-auto h-full flex items-center"
+                        >
+                          <div
+                            class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden"
+                            @click.outside="modalOpen = false"
+                            @keydown.escape.window="modalOpen = false"
+                          >
+                            <iframe
+                              x-show="modalOpen"
+                              @click.outside="!modalOpen"
+                              class="w-full md:h-[500px] sm:h-[400px] h-[350px]"
+                              src="https://www.youtube.com/embed/9snnTSmgiMc"
+                              title="বাংলার যে উন্নত শহর ইবনে বতুতাকে মুগ্ধ করেছিল | Ibn Battuta in Bengal | Labid Rahat"
+                              frameborder="0"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Modal dialog -->
+                    </div>
+                    <!-- End: Modal video component -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -2056,5 +3076,14 @@
 
     <!-- optional js -->
     <script src="../dist/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        Alpine.data.reloadPage = function () {
+          if (this.reloadPage) {
+            window.location.reload();
+          }
+        };
+      });
+    </script>
   </body>
 </html>
