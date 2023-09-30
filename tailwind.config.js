@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  module: "jit",
   content: ["./pages/*.{html,js}", "./admin/*.{html,js}"],
+  darkMode: "class",
   theme: {
     container: {
       padding: {

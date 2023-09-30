@@ -3109,6 +3109,19 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
   var module_default = src_default;
 
   // src/js/function.js
+  document.addEventListener("alpine:init", () => {
+    module_default.store("darkMode", {
+      dark: false,
+      toggle() {
+        this.dark = !this.dark;
+        if (this.dark) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+    });
+  });
   window.Alpine = module_default;
   module_default.start();
 })();
