@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "alpinejs": "^3.13.0",
+    "apexcharts": "^3.43.2-0",
     "esbuild": "^0.19.2"
   }
 }
